@@ -10,10 +10,9 @@ export default function Hero() {
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <p className="text-blue-600 font-semibold text-lg">Welcome to RIDGEGAP</p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Your #1 source for Customized{' '}
-                  <span className="text-blue-600">Corporate Gifting Solutions.</span>
+                <p className="text-black font-semibold text-lg">Welcome to RIDGEGAP</p>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f437f] leading-tight">
+                  Your #1 source for Customized Corporate Gifting Solutions.
                 </h1>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   The Perfect Corporate Gift Makes Anyone Feel Special – Gifting Solutions for Employees, 

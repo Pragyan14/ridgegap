@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-gray-900 text-white py-2 px-4">
+      <div className="bg-[#1b478b] text-white py-4">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-end gap-4 text-sm">
           <a href="tel:+91-82968-13621" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
             <Phone size={16} />
@@ -34,22 +34,22 @@ export default function Navbar() {
           </a>
           <a href="mailto:info@ridgegap.com" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
             <Mail size={16} />
-            <span className="hidden sm:inline">info@ridgegap.com</span>
+            <span className="hidden sm:inline">sunny@ridgegap.com</span>
           </a>
         </div>
       </div>
 
       {/* Main Navbar */}
       <nav className="bg-white shadow-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <a href="/" className="flex items-center">
                 <img
                   src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/logo.png"
                   alt="Ridgegap"
-                  className="h-12 w-auto"
+                  className="h-18 w-auto"
                 />
               </a>
             </div>
@@ -104,7 +104,7 @@ export default function Navbar() {
               {/* CTA Button */}
               <a
                 href="#book-call"
-                className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg"
+                className="bg-[#e34d67] text-white px-6 py-2 font-medium hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg"
               >
                 Book a call
               </a>
