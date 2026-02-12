@@ -96,7 +96,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {usefulLinks.map((link) => (
                   <li key={link.href} className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#3b82f6] transition-colors">
-                    <span className="w-1.5 h-1.5 rounded-full border border-gray-500 flex-shrink-0"></span>
+                    <span className="w-1.5 h-1.5 rounded-full border border-gray-500 shrink-0"></span>
                     <a href={link.href}>{link.label}</a>
                   </li>
                 ))}
@@ -109,7 +109,7 @@ export default function Footer() {
               <div className="space-y-4">
                 {/* Address */}
                 <div className="flex items-start gap-3">
-                  <MapPin size={18} className="text-[#3b82f6] mt-0.5 flex-shrink-0" />
+                  <MapPin size={18} className="text-[#3b82f6] mt-0.5 shrink-0" />
                   <p className="text-sm text-gray-600 leading-relaxed">
                     <strong className="text-gray-900 font-semibold">Ridge Gap Solutions Pvt. Ltd.</strong><br />
                     Ground Floor, (Out House) No. 15, 12th Block, 5th Main, Kumar Park West, Bengaluru, Karnataka 560003
@@ -118,7 +118,7 @@ export default function Footer() {
 
                 {/* Email */}
                 <div className="flex items-center gap-3">
-                  <Mail size={17} className="text-[#3b82f6] flex-shrink-0" />
+                  <Mail size={17} className="text-[#3b82f6] shrink-0" />
                   <a
                     href="mailto:sunny@ridgegap.com"
                     className="text-sm text-gray-600 hover:text-[#3b82f6] transition-colors"
@@ -129,7 +129,7 @@ export default function Footer() {
 
                 {/* Phone */}
                 <div className="flex items-center gap-3">
-                  <Phone size={17} className="text-[#3b82f6] flex-shrink-0" />
+                  <Phone size={17} className="text-[#3b82f6] shrink-0" />
                   <a
                     href="tel:+91-82968-13621"
                     className="text-sm text-gray-600 hover:text-[#3b82f6] transition-colors"
@@ -162,7 +162,7 @@ export default function Footer() {
                 <div className="pt-2">
                   <ul>
                     <li className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#3b82f6] transition-colors">
-                      <span className="w-1.5 h-1.5 rounded-full border border-gray-500 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 rounded-full border border-gray-500 shrink-0"></span>
                       <a href="/privacy-policy">Privacy Policy</a>
                     </li>
                   </ul>

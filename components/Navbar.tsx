@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
+import CTABtn from './ui/CTABtn';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -171,12 +172,7 @@ export default function Navbar() {
                 <a href="/corporate-diwali-gifts" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">
                   Diwali Gifts
                 </a>
-                <a
-                  href="#book-call"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-all text-center shadow-lg"
-                >
-                  Book a call
-                </a>
+                <CTABtn message={"Book a Call"}/>
               </div>
             </div>
           )}

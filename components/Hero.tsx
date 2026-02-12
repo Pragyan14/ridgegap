@@ -23,7 +23,7 @@ export default function Hero() {
               </div>
 
               <div>
-                <CTABtn/>
+                <CTABtn message={"Book a Call"}/>
               </div>
 
               {/* Stats */}
@@ -63,34 +63,34 @@ export default function Hero() {
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+                  <div className="overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
                     <img
                       src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/new-slider-hero-1.jpg"
                       alt="Curated Gift Boxes"
-                      className="w-full h-64 object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+                  <div className="overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
                     <img
                       src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/new-slider-hero-3.jpg"
                       alt="Swag Packs"
-                      className="w-full h-64 object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
                 <div className="space-y-4 mt-8">
-                  <div className="rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+                  <div className="overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
                     <img
                       src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/new-slider-hero-2.jpg"
                       alt="New Joiner Kits"
-                      className="w-full h-64 object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+                  <div className="overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
                     <img
                       src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/new-slider-hero-4.jpg"
                       alt="Office Stationeries"
-                      className="w-full h-64 object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </div>

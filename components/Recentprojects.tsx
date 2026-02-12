@@ -63,102 +63,29 @@ export default function RecentProjects() {
           </p>
         </div>
 
-        {/* Horizontal Scrolling Container */}
-        <div className="overflow-x-auto pb-4 -mx-4 px-4">
-          <div className="flex gap-6 min-w-max">
-            {/* Column 1 */}
-            <div className="flex flex-col gap-6">
-              {row1.map((project, index) => (
-                <div
-                  key={`row1-${index}`}
-                  className={`${project.bgColor} rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 w-[280px] md:w-[320px]`}
-                >
-                  <div className="p-6 pb-0">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-48 object-contain mb-4"
-                    />
-                  </div>
-                  <div className="px-6 pb-6">
-                    <p className="text-center text-gray-800 font-semibold text-base">
-                      {project.title}
-                    </p>
-                  </div>
-                </div>
-              ))}
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className={`${project.bgColor} rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300`}
+            >
+              <div className="p-6 pb-0">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-contain mb-4"
+                />
+              </div>
+              <div className="px-6 pb-6">
+                <p className="text-center text-gray-800 font-semibold text-base">
+                  {project.title}
+                </p>
+              </div>
             </div>
-
-            {/* Column 2 */}
-            <div className="flex flex-col gap-6">
-              {row2.map((project, index) => (
-                <div
-                  key={`row2-${index}`}
-                  className={`${project.bgColor} rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 w-[280px] md:w-[320px]`}
-                >
-                  <div className="p-6 pb-0">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-48 object-contain mb-4"
-                    />
-                  </div>
-                  <div className="px-6 pb-6">
-                    <p className="text-center text-gray-800 font-semibold text-base">
-                      {project.title}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Column 3 */}
-            <div className="flex flex-col gap-6">
-              {row3.map((project, index) => (
-                <div
-                  key={`row3-${index}`}
-                  className={`${project.bgColor} rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 w-[280px] md:w-[320px]`}
-                >
-                  <div className="p-6 pb-0">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-48 object-contain mb-4"
-                    />
-                  </div>
-                  <div className="px-6 pb-6">
-                    <p className="text-center text-gray-800 font-semibold text-base">
-                      {project.title}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Column 4 */}
-            <div className="flex flex-col gap-6">
-              {row4.map((project, index) => (
-                <div
-                  key={`row4-${index}`}
-                  className={`${project.bgColor} rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 w-[280px] md:w-[320px]`}
-                >
-                  <div className="p-6 pb-0">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-48 object-contain mb-4"
-                    />
-                  </div>
-                  <div className="px-6 pb-6">
-                    <p className="text-center text-gray-800 font-semibold text-base">
-                      {project.title}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
+
 
         {/* Scroll Hint for Mobile */}
         <div className="text-center mt-4 md:hidden">
