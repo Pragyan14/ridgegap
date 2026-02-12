@@ -1,3 +1,4 @@
+import BenefitsSection from "@/components/Benefitssection";
 import CorporateGiftingSolutions from "@/components/Corporategiftingsolutions";
 import CTAForm from "@/components/Ctaform";
 import Hero from "@/components/Hero";
@@ -11,6 +12,7 @@ export default function Home() {
       <CorporateGiftingSolutions/>
       <RecentProjects/>
       <CTAForm/>
+      <BenefitsSection/>
     </div>
   );
 }

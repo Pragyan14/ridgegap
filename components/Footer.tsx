@@ -71,7 +71,7 @@ export default function Footer() {
 
               {/* Need Help */}
               <div className="flex items-center gap-4">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <img
                     src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/phone-ico.png"
                     alt="phone"
@@ -210,12 +210,12 @@ export default function Footer() {
           <p className="text-center text-sm text-gray-500">
             © 2026 Ridgegap. All rights reserved. | Powered by{' '}
             <a
-              href="https://tecobytes.com/"
+              href="https://www.monkmantra.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#3b82f6] hover:underline font-medium"
             >
-              Tecobytes
+              MonkMantra
             </a>{' '}
             - Digital Partner
           </p>

@@ -59,9 +59,9 @@ export default function Navbar() {
               <a href="/" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">
                 Home
               </a>
-              
+
               {/* Solutions Dropdown */}
-              <div 
+              <div
                 className="relative"
                 onMouseEnter={() => setOpenDropdown('solutions')}
                 onMouseLeave={() => setOpenDropdown(null)}
@@ -71,16 +71,18 @@ export default function Navbar() {
                   <ChevronDown size={16} className={`transform transition-transform ${openDropdown === 'solutions' ? 'rotate-180' : ''}`} />
                 </button>
                 {openDropdown === 'solutions' && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-white shadow-xl rounded-lg py-2 z-50 border border-gray-100">
-                    {solutions.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        {item.name}
-                      </a>
-                    ))}
+                  <div className="absolute top-full left-0 w-80 pt-2 z-50">
+                    <div className="bg-white shadow-xl rounded-lg py-2 border border-gray-100">
+                      {solutions.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                        >
+                          {item.name}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
@@ -100,7 +102,7 @@ export default function Navbar() {
               <a href="/corporate-diwali-gifts" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">
                 Diwali Gifts
               </a>
-              
+
               {/* CTA Button */}
               <a
                 href="#book-call"
@@ -129,7 +131,7 @@ export default function Navbar() {
                 <a href="/" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">
                   Home
                 </a>
-                
+
                 {/* Mobile Solutions Dropdown */}
                 <div>
                   <button

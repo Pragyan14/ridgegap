@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Corporate Gifting Solutions",
+  title: "Corporate Gifting Solutions Bangalore - Ridgegap",
   description: "Customized corporate gifting solutions for employees, clients & partners with 5000+ products and creative services.",
 };
 
