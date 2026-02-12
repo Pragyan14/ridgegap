@@ -90,10 +90,10 @@ export default function CorporateGiftingSolutions() {
               rel="noopener"
               className={`${solution.bgColor} ${solution.textColor} rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] group relative`}
             >
-              <div className="flex items-center justify-between h-full min-h-[180px] md:min-h-[200px] p-6 md:p-8">
+              <div className="flex items-center justify-between h-full min-h-35 md:min-h-40 p-5 md:p-6">
                 {/* Left Content */}
                 <div className="flex-1 pr-4">
-                  <h4 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+                  <h4 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
                     {solution.title}
                   </h4>
                   <span className="inline-block text-sm md:text-base font-semibold opacity-90 group-hover:opacity-100 transition-opacity">
@@ -102,7 +102,7 @@ export default function CorporateGiftingSolutions() {
                 </div>
 
                 {/* Right Image */}
-                <div className="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 relative">
+                <div className="shrink-0 w-24 h-24 md:w-32 md:h-32 relative">
                   <img
                     src={solution.image}
                     alt={solution.title}

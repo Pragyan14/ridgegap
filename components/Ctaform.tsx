@@ -37,7 +37,7 @@ export default function CTAForm() {
   return (
     <section className="relative py-16 md:py-20 overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#1e40af] to-[#4338ca]"></div>
+      <div className="absolute inset-0 bg-linear-to-r from-[#0c4a6e] via-[#1e40af] to-[#4338ca]"></div>
       
       {/* Decorative Background Pattern */}
       <div className="absolute inset-0 opacity-10">

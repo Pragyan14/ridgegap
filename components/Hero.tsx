@@ -1,10 +1,12 @@
 'use client';
 
+import CTABtn from "./ui/CTABtn";
+
 export default function Hero() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-50 py-16 md:py-24 lg:py-32 overflow-hidden">
+      <section className="relative bg-linear-to-br from-blue-50 to-indigo-50 py-16 md:py-24 lg:py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -21,12 +23,7 @@ export default function Hero() {
               </div>
 
               <div>
-                <a
-                  href="#book-call"
-                  className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg"
-                >
-                  Book a call!
-                </a>
+                <CTABtn/>
               </div>
 
               {/* Stats */}
