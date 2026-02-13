@@ -104,7 +104,7 @@ function FAQItem({
           {number}. {question}
         </span>
         <ChevronDown
-          className={`h-5 w-5 flex-shrink-0 text-[#5a6a7a] transition-transform duration-300 ${
+          className={`h-5 w-5 shrink-0 text-[#5a6a7a] transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
         />

@@ -6,39 +6,64 @@ export default function Hero() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-linear-to-br from-blue-50 to-indigo-50 py-16 md:py-24 lg:py-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        className="relative py-16 md:py-24 lg:py-32 overflow-hidden bg-repeat"
+        style={{
+          backgroundImage:
+            'url("https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/slider-pattern-bg.png")',
+        }}
+      >
+        {/* Optional Light Overlay for better text visibility */}
+        <div className="absolute inset-0"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <p className="text-black font-semibold text-lg">Welcome to RIDGEGAP</p>
+                <p className="text-black font-semibold text-lg">
+                  Welcome to RIDGEGAP
+                </p>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f437f] leading-tight">
                   Your #1 source for Customized Corporate Gifting Solutions.
                 </h1>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  The Perfect Corporate Gift Makes Anyone Feel Special – Gifting Solutions for Employees, 
-                  Clients and Business Partners to recognise and reward success in the workplace.
+                  The Perfect Corporate Gift Makes Anyone Feel Special – Gifting
+                  Solutions for Employees, Clients and Business Partners to
+                  recognise and reward success in the workplace.
                 </p>
               </div>
 
               <div>
-                <CTABtn message={"Book a Call"}/>
+                <CTABtn message={"Book a Call"} />
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 pt-8">
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600">200+</div>
-                  <div className="text-sm text-gray-600 mt-1">Projects Completed</div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600">
+                    200+
+                  </div>
+                  <div className="text-sm text-gray-600 mt-1">
+                    Projects Completed
+                  </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600">20000+</div>
-                  <div className="text-sm text-gray-600 mt-1">Packages Delivered</div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600">
+                    20000+
+                  </div>
+                  <div className="text-sm text-gray-600 mt-1">
+                    Packages Delivered
+                  </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600">5000+</div>
-                  <div className="text-sm text-gray-600 mt-1">Innovative Products</div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600">
+                    5000+
+                  </div>
+                  <div className="text-sm text-gray-600 mt-1">
+                    Innovative Products
+                  </div>
                 </div>
               </div>
 
@@ -55,7 +80,9 @@ export default function Hero() {
                     </svg>
                   ))}
                 </div>
-                <span className="text-gray-700 font-semibold">100+ Reviews</span>
+                <span className="text-gray-700 font-semibold">
+                  100+ Reviews
+                </span>
               </div>
             </div>
 
@@ -96,18 +123,12 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Decorative Elements */}
+              {/* Decorative Blur Elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-200 rounded-full opacity-50 blur-2xl"></div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-indigo-200 rounded-full opacity-50 blur-2xl"></div>
             </div>
-          </div>
-        </div>
 
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5 pointer-events-none">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
+          </div>
         </div>
       </section>
 
@@ -118,34 +139,34 @@ export default function Hero() {
             You're in Good Company
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 transition-all">
-            <img 
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/google-showlogimg.png" 
-              alt="Google" 
+            <img
+              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/google-showlogimg.png"
+              alt="Google"
               className="h-8 md:h-10 w-auto object-contain"
             />
-            <img 
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/amazon-showlogimg.png" 
-              alt="Amazon" 
+            <img
+              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/amazon-showlogimg.png"
+              alt="Amazon"
               className="h-8 md:h-10 w-auto object-contain"
             />
-            <img 
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/mercedes-benz-showlogimg.png" 
-              alt="Mercedes-Benz" 
+            <img
+              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/mercedes-benz-showlogimg.png"
+              alt="Mercedes-Benz"
               className="h-8 md:h-10 w-auto object-contain"
             />
-            <img 
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/jpmorgan-showlogimg.png" 
-              alt="JPMorgan" 
+            <img
+              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/jpmorgan-showlogimg.png"
+              alt="JPMorgan"
               className="h-8 md:h-10 w-auto object-contain"
             />
-            <img 
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/bigbasket-showlogimg.png" 
-              alt="BigBasket" 
+            <img
+              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/bigbasket-showlogimg.png"
+              alt="BigBasket"
               className="h-8 md:h-10 w-auto object-contain"
             />
-            <img 
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/unacademy-showlogimg.png" 
-              alt="Unacademy" 
+            <img
+              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/unacademy-showlogimg.png"
+              alt="Unacademy"
               className="h-8 md:h-10 w-auto object-contain"
             />
           </div>

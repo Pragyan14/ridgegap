@@ -68,15 +68,24 @@ export default function TestimonialCarousel() {
   }, [maxIndex])
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#e8eff5]">
-      {/* Background overlay with faded collage effect */}
-      <div className="absolute inset-0 bg-[#e8eff5]/90" />
+    <section
+      className="relative w-full overflow-hidden bg-repeat bg-center"
+      style={{
+        backgroundImage:
+          'url("https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/bg-test.png")',
+      }}
+    >
+      {/* Soft overlay for readability */}
+      <div className="absolute inset-0" />
 
       <div className="relative px-6 py-16 md:px-16 md:py-24">
         {/* Heading */}
         <h2
           className="mb-12 text-center text-3xl md:text-4xl lg:text-5xl"
-          style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#0a2351" }}
+          style={{
+            fontFamily: "var(--font-playfair), Georgia, serif",
+            color: "#0a2351",
+          }}
         >
           {"Here's What People Have to Say!"}
         </h2>
@@ -113,10 +122,13 @@ export default function TestimonialCarousel() {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="w-full flex-shrink-0 px-4 md:w-1/3"
+                  className="w-full shrink-0 px-4 md:w-1/3"
                   style={{ minWidth: `${100 / cardsPerView}%` }}
                 >
-                  <TestimonialCard quote={testimonial.quote} name={testimonial.name} />
+                  <TestimonialCard
+                    quote={testimonial.quote}
+                    name={testimonial.name}
+                  />
                 </div>
               ))}
             </div>
@@ -127,7 +139,13 @@ export default function TestimonialCarousel() {
   )
 }
 
-function TestimonialCard({ quote, name }: { quote: string; name: string }) {
+function TestimonialCard({
+  quote,
+  name,
+}: {
+  quote: string
+  name: string
+}) {
   return (
     <div className="flex h-full flex-col justify-between py-4">
       {/* Quote mark */}
@@ -147,13 +165,17 @@ function TestimonialCard({ quote, name }: { quote: string; name: string }) {
           />
         </svg>
 
-        <p className="text-sm leading-relaxed text-[#3a3a3a] md:text-base">{quote}</p>
+        <p className="text-sm leading-relaxed text-[#3a3a3a] md:text-base">
+          {quote}
+        </p>
       </div>
 
       {/* Author */}
       <div className="mt-8">
         <div className="mb-3 h-px w-full bg-[#c0c8d0]" />
-        <p className="text-sm font-semibold text-[#1a1a1a] md:text-base">{name}</p>
+        <p className="text-sm font-semibold text-[#1a1a1a] md:text-base">
+          {name}
+        </p>
       </div>
     </div>
   )
