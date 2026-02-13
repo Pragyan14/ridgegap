@@ -170,7 +170,7 @@ export default function MostPopularGifting() {
             {row1Doubled.map((item, index) => (
               <div
                 key={`r1-${index}`}
-                className="group shrink-0 w-[150px] sm:w-[170px] md:w-[190px] lg:w-[210px]"
+                className="group shrink-0 w-37.5 sm:w-42.5 md:w-47.5 lg:w-52.5"
               >
                 <div className="overflow-hidden aspect-square bg-gray-200">
                   <img
@@ -193,7 +193,7 @@ export default function MostPopularGifting() {
             {row2Doubled.map((item, index) => (
               <div
                 key={`r2-${index}`}
-                className="group shrink-0 w-[150px] sm:w-[170px] md:w-[190px] lg:w-[210px]"
+                className="group shrink-0 w-37.5 sm:w-42.5 md:w-47.5 lg:w-52.5"
               >
                 <div className="overflow-hidden aspect-square bg-gray-200">
                   <img
