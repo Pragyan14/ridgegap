@@ -68,13 +68,13 @@ export default function RecentProjects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`${project.bgColor} rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300`}
+              className={`rounded-2xl overflow-hidden hover:transition-shadow duration-300`}
             >
-              <div className="p-6 pb-0">
+              <div className="pb-0">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-contain mb-4"
+                  className="w-full h-48 shadow-lg object-contain mb-4"
                 />
               </div>
               <div className="px-6 pb-6">
