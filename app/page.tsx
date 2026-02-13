@@ -1,6 +1,8 @@
 import BenefitsSection from "@/components/Benefitssection";
+import BrandsWeRepresent from "@/components/BrandsWeRepresent";
 import CorporateGiftingSolutions from "@/components/Corporategiftingsolutions";
 import CTAForm from "@/components/Ctaform";
+import FAQ from "@/components/FAQ";
 import GetInTouch from "@/components/Getintouch";
 import Hero from "@/components/Hero";
 import MostPopularGifting from "@/components/Mostpopulargifting";
@@ -14,17 +16,19 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-      <Hero/>
-      <CorporateGiftingSolutions/>
-      <RecentProjects/>
-      <CTAForm/>
-      <BenefitsSection/>
-      <MostPopularGifting/>
-      <GetInTouch/>
-      <ProductCategories/>
-      <WhyChooseUs/>
-      <WhatWeDoBest/>
-      <Testimonials/>
+      <Hero />
+      <CorporateGiftingSolutions />
+      <RecentProjects />
+      <CTAForm />
+      <BenefitsSection />
+      <MostPopularGifting />
+      <GetInTouch />
+      <ProductCategories />
+      <WhyChooseUs />
+      <WhatWeDoBest />
+      <Testimonials />
+      <FAQ />
+      <BrandsWeRepresent />
     </div>
   );
 }

@@ -143,10 +143,10 @@ export default function MostPopularGifting() {
           100% { transform: translateX(0); }
         }
         .marquee-left {
-          animation: scroll-left 35s linear infinite;
+          animation: scroll-left 155s linear infinite;
         }
         .marquee-right {
-          animation: scroll-right 3s linear infinite;
+          animation: scroll-right 155s linear infinite;
         }
         .marquee-left:hover,
         .marquee-right:hover {
@@ -166,7 +166,7 @@ export default function MostPopularGifting() {
 
         {/* Row 1 — scrolls LEFT (right to left) */}
         <div className="overflow-hidden mb-1">
-          <div className="flex w-max gap-8">
+          <div className="flex w-max gap-8 marquee-left">
             {row1Doubled.map((item, index) => (
               <div
                 key={`r1-${index}`}
@@ -189,7 +189,7 @@ export default function MostPopularGifting() {
 
         {/* Row 2 — scrolls RIGHT (left to right) */}
         <div className="overflow-hidden">
-          <div className="flex w-max gap-8">
+          <div className="flex w-max gap-8 marquee-right">
             {row2Doubled.map((item, index) => (
               <div
                 key={`r2-${index}`}
