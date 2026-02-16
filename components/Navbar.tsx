@@ -91,7 +91,7 @@ export default function Navbar() {
               <a href="/products" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">
                 Products
               </a>
-              <a href="/about-us" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">
+              <a href="/about" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">
                 What We Do
               </a>
               <a href="/blog" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">
@@ -160,7 +160,7 @@ export default function Navbar() {
                 <a href="/products" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">
                   Products
                 </a>
-                <a href="/about-us" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">
+                <a href="/about" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">
                   What We Do
                 </a>
                 <a href="/blog" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">

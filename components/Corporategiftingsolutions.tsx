@@ -68,15 +68,29 @@ export default function CorporateGiftingSolutions() {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-12 md:py-16 overflow-hidden">
+
+      {/* Background Pattern */}
+      <div
+        className="absolute inset-0 bg-repeat bg-center pointer-events-none"
+        style={{
+          backgroundImage:
+            "url('https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/bgn-pattern.png')",
+          opacity: 100, // increase if needed (0.2 or 0.25)
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Corporate Gifting Solutions
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Corporate gifting solution that delivers value to your workforce and clients. We provide a full range of creative solutions to suit all budgets and occasions.
+            Corporate gifting solution that delivers value to your workforce and
+            clients. We provide a full range of creative solutions to suit all
+            budgets and occasions.
           </p>
         </div>
 
@@ -90,7 +104,7 @@ export default function CorporateGiftingSolutions() {
               rel="noopener"
               className={`${solution.bgColor} ${solution.textColor} rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] group relative`}
             >
-              <div className="flex items-center justify-between h-full min-h-35 md:min-h-40 p-5 md:p-6">
+              <div className="flex items-center justify-between h-full p-5 md:p-6">
                 {/* Left Content */}
                 <div className="flex-1 pr-4">
                   <h4 className="text-xl md:text-2xl font-bold mb-3 leading-tight">
@@ -111,11 +125,18 @@ export default function CorporateGiftingSolutions() {
                 </div>
               </div>
 
-              {/* Decorative Pattern Overlay */}
+              {/* Decorative Pattern Overlay Inside Card */}
               <div className="absolute inset-0 opacity-5 pointer-events-none">
                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                   <defs>
-                    <pattern id={`pattern-${index}`} x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <pattern
+                      id={`pattern-${index}`}
+                      x="0"
+                      y="0"
+                      width="40"
+                      height="40"
+                      patternUnits="userSpaceOnUse"
+                    >
                       <circle cx="20" cy="20" r="1" fill="currentColor" />
                     </pattern>
                   </defs>
@@ -127,5 +148,6 @@ export default function CorporateGiftingSolutions() {
         </div>
       </div>
     </section>
+
   );
 }
