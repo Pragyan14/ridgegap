@@ -9,7 +9,7 @@ export default function GetInTouch() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* ── LEFT — Collage with geometric shapes ── */}
-          <div className="relative w-full h-[420px] md:h-[500px]">
+          <div className="relative w-full h-105 md:h-125">
 
             {/* Orange semicircle — top left */}
             <div className="absolute top-0 left-0 w-36 h-36 md:w-48 md:h-48 bg-[#e85d2f] rounded-full z-10" />
@@ -21,7 +21,7 @@ export default function GetInTouch() {
             <div className="absolute bottom-0 left-0 w-24 h-28 md:w-32 md:h-36 bg-[#1e3a8a] rounded-[50%_50%_50%_50%/40%_40%_60%_60%] z-10" />
 
             {/* Main product collage image — circle crop, right side */}
-            <div className="absolute top-4 right-0 md:right-4 w-[240px] h-[240px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden z-20 shadow-xl">
+            <div className="absolute top-4 right-0 md:right-4 w-60 h-60 md:w-75 md:h-75 rounded-full overflow-hidden z-20 shadow-xl">
               <img
                 src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/cg-gifting-showcase-1.png"
                 alt="Corporate Gifting Products"
@@ -30,7 +30,7 @@ export default function GetInTouch() {
             </div>
 
             {/* Jacket / Apparel image — left center */}
-            <div className="absolute top-[30%] left-0 w-[140px] h-[170px] md:w-[180px] md:h-[210px] rounded-xl overflow-hidden z-20 shadow-lg">
+            <div className="absolute top-[30%] left-0 w-35 h-42.5 md:w-45 md:h-52.5 rounded-xl overflow-hidden z-20 shadow-lg">
               <img
                 src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/works/all-works/our-works-showcase-7.jpg"
                 alt="Customised Apparel"
@@ -39,24 +39,34 @@ export default function GetInTouch() {
             </div>
 
             {/* Red burst / starburst decoration */}
-            <div className="absolute top-[28%] left-[130px] md:left-[165px] z-30">
+            <div className="absolute top-[28%] left-32.5 md:left-41.25 z-30">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                {[0,30,60,90,120,150,180,210,240,270,300,330].map((deg, i) => (
-                  <line
-                    key={i}
-                    x1="20" y1="20"
-                    x2={20 + 18 * Math.cos((deg * Math.PI) / 180)}
-                    y2={20 + 18 * Math.sin((deg * Math.PI) / 180)}
-                    stroke="#e85d2f" strokeWidth="2.5" strokeLinecap="round"
-                  />
-                ))}
+                {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((deg, i) => {
+                  const rad = (deg * Math.PI) / 180
+                  const x2 = (20 + 18 * Math.cos(rad)).toFixed(4)
+                  const y2 = (20 + 18 * Math.sin(rad)).toFixed(4)
+
+                  return (
+                    <line
+                      key={i}
+                      x1="20"
+                      y1="20"
+                      x2={x2}
+                      y2={y2}
+                      stroke="#e85d2f"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                  )
+                })}
+
               </svg>
             </div>
 
             {/* Pink zig-zag / arrow decoration */}
-            <div className="absolute bottom-[28%] left-[10px] z-30">
+            <div className="absolute bottom-[28%] left-2.5 z-30">
               <svg width="36" height="50" viewBox="0 0 36 50" fill="none">
-                {[0,1,2,3].map((i) => (
+                {[0, 1, 2, 3].map((i) => (
                   <polyline
                     key={i}
                     points={`4,${8 + i * 10} 18,${2 + i * 10} 32,${8 + i * 10}`}
@@ -88,7 +98,7 @@ export default function GetInTouch() {
 
             {/* CTA Button */}
             <div className="pt-2">
-              <CTABtn message={"Connect Now!"}/>
+              <CTABtn message={"Connect Now!"} />
             </div>
 
           </div>

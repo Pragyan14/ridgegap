@@ -1,5 +1,6 @@
 import BenefitsSection from "@/components/Benefitssection";
 import BrandsWeRepresent from "@/components/BrandsWeRepresent";
+import CompanyLogos from "@/components/CompanyLogo";
 import CorporateGiftingSolutions from "@/components/Corporategiftingsolutions";
 import CTAForm from "@/components/Ctaform";
 import FAQ from "@/components/FAQ";
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <CompanyLogos/>
       <CorporateGiftingSolutions />
       <RecentProjects />
       <CTAForm />

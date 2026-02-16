@@ -133,7 +133,7 @@ export default function Hero() {
       </section>
 
       {/* Company Logos Section */}
-      <section className="py-12 bg-white">
+      {/* <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="text-center text-2xl font-semibold text-gray-900 mb-8">
             You're in Good Company
@@ -171,7 +171,7 @@ export default function Hero() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

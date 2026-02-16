@@ -1,0 +1,33 @@
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slideTrack {
+  display: flex;
+  width: max-content;
+  animation: scroll 52s linear infinite;
+}
+
+.slide {
+  margin: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Smooth infinite scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.slideTrack:hover {
+  animation-play-state: paused;
+}

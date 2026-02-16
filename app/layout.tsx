@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Mail } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,9 +30,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {<Header/>}
+        {<Header />}
         {children}
-        {<Footer/>}
+        <a
+          href="/contact"
+          className="fixed right-0 top-2/3 -translate-y-1/2 z-50"
+        >
+          <div className="bg-blue-900 text-white px-8 py-3 shadow-lg rotate-360 [writing-mode:vertical-rl] hover:bg-blue-800">
+            Connect Now!
+          </div>
+        </a>
+        {<Footer />}
       </body>
     </html>
   );
