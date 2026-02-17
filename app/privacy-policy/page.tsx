@@ -55,7 +55,7 @@ export default function ContactsPage() {
     <div>
 
       {/* Hero Section */}
-      <section className="relative w-full bg-gradient-to-r from-[#00d2ff] via-[#7165e3] to-[#ed1aff] text-white py-24 md:py-32 overflow-hidden">
+      <section className="relative w-full bg-linear-to-r from-[#00d2ff] via-[#7165e3] to-[#ed1aff] text-white py-24 md:py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
