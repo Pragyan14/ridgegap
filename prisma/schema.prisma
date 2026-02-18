@@ -30,3 +30,17 @@ model Blog {
   @@map("blog") 
 }
 
+model Lead {
+  id         String   @id @default(uuid())
+  fullName   String
+  phone      String
+  email      String
+  message    String
+  source     String?  
+  status     String   @default("new") 
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("lead")
+}
+

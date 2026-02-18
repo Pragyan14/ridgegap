@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Mail } from "lucide-react";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,8 +33,9 @@ export default function RootLayout({
       >
         {<Header />}
         {children}
+        <Toaster position="top-right"/>
         <a
-          href="/contact"
+          href="/contact-us"
           className="fixed right-0 top-2/3 -translate-y-1/2 z-50"
         >
           <div className="bg-blue-900 text-white px-8 py-3 shadow-lg rotate-360 [writing-mode:vertical-rl] hover:bg-blue-800">
