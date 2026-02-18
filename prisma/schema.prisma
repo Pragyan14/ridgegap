@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Blog {
+  id               String    @id @default(uuid())
+  wp_id            Int       @unique
+  title            String
+  slug             String    @unique
+  excerpt          String?
+  content          String
+  featured_image   String?
+  author_name      String?
+  categories       String[]  @default([])
+  tags             String[]  @default([])
+  status           String    @default("publish")
+  type             String    @default("post")
+  canonical_url    String?
+  seo_title        String?
+  seo_description  String?
+  published_at     DateTime?
+  published_at_utc DateTime?
+  created_at       DateTime  @default(now())
+  updated_at       DateTime  @updatedAt
+
+  @@map("blog") 
+}
+
