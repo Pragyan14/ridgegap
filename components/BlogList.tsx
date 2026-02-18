@@ -1,31 +1,22 @@
-import { blogs } from "@/lib/blog-data";
 import BlogCard from "./BlogCard";
 import Link from "next/link";
 
-const POSTS_PER_PAGE = 2;
+interface BlogListProps {
+  blogs: any[];
+  currentPage: number;
+  totalPages: number;
+}
 
 export default function BlogList({
+  blogs,
   currentPage,
-}: {
-  currentPage: number;
-}) {
-  const totalPages = Math.ceil(blogs.length / POSTS_PER_PAGE);
-
-  if (currentPage > totalPages) {
-    return <div className="text-center py-10">Page not found</div>;
-  }
-
-  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-  const paginatedBlogs = blogs.slice(
-    startIndex,
-    startIndex + POSTS_PER_PAGE
-  );
-
+  totalPages,
+}: BlogListProps) {
   return (
     <div className="container max-w-7xl mx-auto py-10">
       {/* Blog Grid */}
       <div className="grid md:grid-cols-2 gap-8">
-        {paginatedBlogs.map((blog) => (
+        {blogs.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}
       </div>

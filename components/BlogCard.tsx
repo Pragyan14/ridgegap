@@ -1,13 +1,17 @@
 import Link from "next/link";
-import { Blog } from "@/lib/blog-data";
+import { decode } from "html-entities";
 
-export default function BlogCard({ blog }: { blog: Blog }) {
+export default function BlogCard({ blog }: { blog: any }) {
+  const formattedDate = blog.published_at
+    ? new Date(blog.published_at).toDateString()
+    : "";
+
   return (
     <article className="h-full border p-4 shadow-sm rounded-md bg-white">
       <div className="mb-3">
         <Link href={`/blog/${blog.slug}`}>
           <img
-            src={blog.image}
+            src={blog.featured_image || "/images/default.jpg"}
             alt={blog.title}
             className="w-full h-56 object-cover rounded"
           />
@@ -16,13 +20,13 @@ export default function BlogCard({ blog }: { blog: Blog }) {
 
       <h3 className="font-semibold text-lg mb-2">
         <Link href={`/blog/${blog.slug}`} className="hover:underline">
-          {blog.title}
+          {decode(blog.title)}
         </Link>
       </h3>
 
-      <p className="text-sm text-gray-500 mb-2">{blog.date}</p>
+      <p className="text-sm text-gray-500 mb-2">{formattedDate}</p>
 
-      <p className="text-gray-700 text-sm mb-3">{blog.excerpt}</p>
+      <p className="text-gray-700 text-sm mb-3">{decode(blog.excerpt || "")}</p>
 
       <Link
         href={`/blog/${blog.slug}`}
@@ -33,3 +37,4 @@ export default function BlogCard({ blog }: { blog: Blog }) {
     </article>
   );
 }
+
