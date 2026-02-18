@@ -20,37 +20,89 @@ export default async function BlogDetail({
 
   const formattedDate = blog.published_at
     ? new Date(blog.published_at).toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      })
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
     : "";
 
   return (
-    <div className="container max-w-4xl mx-auto py-10 prose">
-      <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
+    <>
+      <div className="bg-gray-100 min-h-screen py-14">
+        <div className="max-w-7xl mx-auto grid grid-cols-3 gap-10">
 
-      {blog.author_name && (
-        <p className="text-sm text-gray-500 mb-6">
-          By {blog.author_name} | {formattedDate}
-        </p>
-      )}
+          {/* LEFT – BLOG CONTENT */}
+          <div className="col-span-2 bg-white rounded-lg shadow-md p-10">
 
-      <p className="text-sm text-gray-500 mb-6">
-          Posted on {formattedDate} by ridgegap_user
-        </p>
+            {/* Title Banner */}
+            <div className="bg-[#f0f8ff] p-6 rounded-md mb-6">
+              <h1 className="text-4xl font-semibold text-[#1a96cd] leading-tight">
+                {blog.title}
+              </h1>
+            </div>
 
-      <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+            {/* Meta */}
+            <p className="text-sm text-gray-500 mb-6">
+              Posted on {formattedDate} by{" "}
+              <span className="text-blue-600">ridgegap_user</span>
+            </p>
 
-      {blog.categories.length > 0 && (
-        <p className="mt-6 text-sm">
-          Categories: {blog.categories.join(", ")}
-        </p>
-      )}
+            <img
+              src={blog.featured_image ?? undefined}
+              alt={blog.slug}
+              className="my-6 rounded-4xl"
+            />
 
-      {blog.tags.length > 0 && (
-        <p className="mt-2 text-sm">Tags: {blog.tags.join(", ")}</p>
-      )}
-    </div>
+            {/* Blog Content */}
+            <div className="prose max-w-none">
+              <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+            </div>
+          </div>
+
+
+          {/* RIGHT – SIDEBAR */}
+          <div className="space-y-6">
+
+            {/* Recent Posts Card */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-blue-800 mb-4">
+                Recent Posts
+              </h3>
+
+              <ul className="space-y-3 text-gray-700 text-sm">
+                <li className="hover:text-blue-600 cursor-pointer">
+                  Corporate Gifting for Gen Z Employees: A Complete 2026 Guide
+                </li>
+                <li className="hover:text-blue-600 cursor-pointer">
+                  Quarterly Appreciation Gifting vs Annual Bonuses
+                </li>
+                <li className="hover:text-blue-600 cursor-pointer">
+                  Corporate Gifting Mistakes That Damage Employer Brand
+                </li>
+                <li className="hover:text-blue-600 cursor-pointer">
+                  Phygital Corporate Gifts for Employees and Clients
+                </li>
+              </ul>
+            </div>
+
+
+            {/* Categories Card */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-blue-800 mb-4">
+                Categories
+              </h3>
+
+              <ul className="text-sm text-blue-600">
+                <li className="hover:underline cursor-pointer">
+                  Corporate Gifting
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </>
   );
 }

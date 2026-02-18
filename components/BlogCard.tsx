@@ -7,13 +7,13 @@ export default function BlogCard({ blog }: { blog: any }) {
     : "";
 
   return (
-    <article className="h-full border p-4 shadow-sm rounded-md bg-white">
-      <div className="mb-3">
+    <article className="h-full border border-gray-300 p-4 shadow-sm bg-white">
+      <div className="mb-3 ">
         <Link href={`/blog/${blog.slug}`}>
           <img
             src={blog.featured_image || "/images/default.jpg"}
             alt={blog.title}
-            className="w-full h-56 object-cover rounded"
+            className="w-full h-86 object-cover rounded-4xl"
           />
         </Link>
       </div>
@@ -30,7 +30,7 @@ export default function BlogCard({ blog }: { blog: any }) {
 
       <Link
         href={`/blog/${blog.slug}`}
-        className="inline-block px-4 py-2 border rounded text-sm hover:bg-gray-100"
+        className="inline-block px-4 py-2 border border-gray-300 rounded text-sm hover:bg-gray-100"
       >
         Read More
       </Link>
