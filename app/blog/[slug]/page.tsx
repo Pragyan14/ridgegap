@@ -6,34 +6,51 @@ export const revalidate = 60;
 export default async function BlogDetail({
   params,
 }: {
-  params: { slug: string }; // NOT Promise
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
 
   if (!slug) return notFound();
 
-  const blog = await prisma.blog.findUnique({
-    where: { slug }, // Prisma expects string
+  const blog = await prisma.blog.findFirst({
+    where: { slug, status: "publish" },
   });
 
   if (!blog) return notFound();
 
-  return (
-    <div className="container max-w-4xl mx-auto py-10">
-      <h1 className="text-3xl font-bold mb-4">{blog.title}</h1>
+  const formattedDate = blog.published_at
+    ? new Date(blog.published_at).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : "";
 
-      {blog.featured_image && (
-        <img
-          src={blog.featured_image}
-          alt={blog.title}
-          className="w-full h-80 object-cover rounded mb-6"
-        />
+  return (
+    <div className="container max-w-4xl mx-auto py-10 prose">
+      <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
+
+      {blog.author_name && (
+        <p className="text-sm text-gray-500 mb-6">
+          By {blog.author_name} | {formattedDate}
+        </p>
       )}
 
-      <div
-        className="prose max-w-none"
-        dangerouslySetInnerHTML={{ __html: blog.content }}
-      />
+      <p className="text-sm text-gray-500 mb-6">
+          Posted on {formattedDate} by ridgegap_user
+        </p>
+
+      <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+
+      {blog.categories.length > 0 && (
+        <p className="mt-6 text-sm">
+          Categories: {blog.categories.join(", ")}
+        </p>
+      )}
+
+      {blog.tags.length > 0 && (
+        <p className="mt-2 text-sm">Tags: {blog.tags.join(", ")}</p>
+      )}
     </div>
   );
 }
