@@ -2,10 +2,14 @@
 
 import BenefitsSection from "@/components/Benefitssection";
 import BrandsWeRepresent from "@/components/BrandsWeRepresent";
+import CompanyLogos from "@/components/CompanyLogo";
+import CorporateGiftingSolutions from "@/components/Corporategiftingsolutions";
 import JoinerSteps from "@/components/JoinerSteps";
 import MostPopularGifting from "@/components/Mostpopulargifting";
 import ProductBenefit from "@/components/ProductBenfits";
+import ProductsFeatures, { FeatureItem } from "@/components/ProductsFeatures";
 import RecentProjects from "@/components/Recentprojects";
+import TestimonialCarousel from "@/components/Testimonials";
 import CTABtn from "@/components/ui/CTABtn";
 import WhyChooseUs from "@/components/Whychooseus";
 
@@ -42,6 +46,37 @@ const benefits = [
     },
 ];
 
+const featuresData: FeatureItem[] = [
+  {
+    icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/warehouse-facility-ico.png",
+    html: "Store your Stock with us – <strong> Warehouse facility. </strong>",
+  },
+  {
+    icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/pre-curated-ico.png",
+    html: "<strong>Pre curated</strong> – boxes readily available to ship.",
+  },
+  {
+    icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/branded-ico.png",
+    html: "<strong>Branded</strong> – With your company logo.",
+  },
+  {
+    icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/low-turnaround-time-ico.png",
+    html: "<strong>Low turnaround time</strong> – For urgent needs.",
+  },
+  {
+    icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/box-ico.png",
+    html: "Build your own box – Choose from <strong>5000+ products.</strong>",
+  },
+  {
+    icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/customization-ico.png",
+    html: "<strong>100% customizable</strong> – Designed the way you like it.",
+  },
+  {
+    icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/personalized-ico.png",
+    html: "<strong>Personalized</strong> – Shipping directly to employee.",
+  },
+];
+
 export default function NewJoinerKits() {
     return <>
         <section
@@ -75,7 +110,7 @@ export default function NewJoinerKits() {
             </div>
         </section>
 
-        <BrandsWeRepresent />
+        <CompanyLogos />
 
         <JoinerSteps />
 
@@ -89,6 +124,16 @@ export default function NewJoinerKits() {
 
         <MostPopularGifting/>
 
-        <WhyChooseUs/>
+        <ProductsFeatures
+            features={featuresData}
+            heading="Features"
+            subheading="Get started on the path to good employee retention & engagement by providing your new employees with a strong on boarding experience. We help companies just like yours enhance their employee on boarding experience with high quality welcome packs to make employees feel welcomed, valued & attended to before they even step foot in your building."
+        />
+
+        <TestimonialCarousel/>
+
+        <CorporateGiftingSolutions/>
+
+        <BrandsWeRepresent/>
     </>;
 }
