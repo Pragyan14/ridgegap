@@ -12,7 +12,7 @@ interface CardGridProps {
 
 const ProductGrid: React.FC<CardGridProps> = ({ mainHeading, items }) => {
   return (
-    <section className="py-16 px-6 sm:px-12 lg:px-24 bg-gray-50">
+    <section className="py-8 px-6 sm:px-12 lg:px-24 bg-gray-50">
       
       {/* Main Heading */}
       <h2 className="text-3xl sm:text-4xl font-serif font-bold text-center text-blue-900 mb-12">

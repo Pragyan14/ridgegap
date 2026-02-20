@@ -44,3 +44,17 @@ model Lead {
   @@map("lead")
 }
 
+model ProductPage {
+  id              String   @id @default(uuid())
+  slug            String   @unique
+  h1              String?
+  h2              String
+  seo_title       String?
+  seo_description String?
+  hero_subheading String?
+  data_json       Json
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
+
+  @@map("product_pages")
+}

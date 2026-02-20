@@ -50,6 +50,24 @@ export default function ProductCategories() {
       image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/travel-accessories-category-showcase.jpg',
       href: '/travel-accessories',
     },
+    {
+      title: 'Tech Accessories',
+      description: 'Cool Tech Gifts That Will Make Life Easier & More Fun.',
+      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/technology-accessories-thumbnail-show.jpg',
+      href: '/tech-accessories',
+    },
+    {
+      title: 'Desk Accessories',
+      description: 'Gifts that will make your work more organised on your…',
+      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/desk-accessories-category-showcase.jpg',
+      href: '/desk-accessories',
+    },
+    {
+      title: 'Health & Fitness',
+      description: 'Fitness Gifts That Will Impress Your Most Active Friends.',
+      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/health-fitness-thumbnail-show.jpg',
+      href: '/health-fitness-gifts',
+    },
   ];
 
   return (
