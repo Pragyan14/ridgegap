@@ -1,8 +1,8 @@
-import MostPopularGifting from "@/components/Mostpopulargifting";
+import BrandsWeRepresent from "@/components/BrandsWeRepresent";
+import ContactForm from "@/components/Contactform";
+import FloatingCTA from "@/components/FloatingCTA";
 import ProductGrid, { CardItem } from "@/components/ProductGrid";
-import RecentProjects from "@/components/Recentprojects";
 import CTABtn from "@/components/ui/CTABtn";
-import WhyChooseUs from "@/components/Whychooseus";
 import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 
@@ -34,7 +34,6 @@ export default async function ProductCategoryPage({ params }: Props) {
   let sections: Record<string, CardItem[]> | undefined;
 
   if (dataJson && typeof dataJson === "object" && !Array.isArray(dataJson)) {
-    // Now TypeScript knows dataJson is an object
     sections = (dataJson as Record<string, any>).sections;
   }
 
@@ -89,6 +88,13 @@ export default async function ProductCategoryPage({ params }: Props) {
         </div>
       ))}
 
+      <div className="bg-red-500">
+        <ContactForm />
+      </div>
+
+      <BrandsWeRepresent/>
+
+      <FloatingCTA type="catalogue"/>
     </>
   );
 }

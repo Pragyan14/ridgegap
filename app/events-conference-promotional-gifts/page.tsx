@@ -3,6 +3,7 @@
 import BrandsWeRepresent from "@/components/BrandsWeRepresent";
 import CompanyLogos from "@/components/CompanyLogo";
 import CorporateGiftingSolutions from "@/components/Corporategiftingsolutions";
+import FloatingCTA from "@/components/FloatingCTA";
 import MostPopularGifting from "@/components/Mostpopulargifting";
 import ProductBenefit from "@/components/ProductBenfits";
 import ProductHero from "@/components/ProductHero";
@@ -74,5 +75,7 @@ export default function EventGifts() {
         <CorporateGiftingSolutions />
 
         <BrandsWeRepresent />
+
+        <FloatingCTA type="connect"/>
     </>;
 }

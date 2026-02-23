@@ -1,5 +1,6 @@
 'use client';
 
+import FloatingCTA from "@/components/FloatingCTA";
 import ProductCategories from "@/components/Productcategories";
 import TestimonialCarousel from "@/components/Testimonials";
 import CTABtn from "@/components/ui/CTABtn";
@@ -40,9 +41,12 @@ export default function ProductsPage() {
     </section>
 
     <ProductCategories/>
+
     <WhyChooseUs/>
 
     <TestimonialCarousel/>
+
+    <FloatingCTA type="connect"/>
     </>
   );
 }

@@ -1,5 +1,6 @@
 'use client'
 
+import FloatingCTA from "@/components/FloatingCTA";
 import WhyChooseUs from "@/components/Whychooseus";
 
 export default function AboutPage() {
@@ -89,6 +90,7 @@ export default function AboutPage() {
 
             <WhyChooseUs />
 
+            <FloatingCTA type="connect" />
         </>
     );
 }

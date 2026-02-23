@@ -10,6 +10,7 @@ import ProductsFeatures, { FeatureItem } from "@/components/ProductsFeatures";
 import RecentProjects from "@/components/Recentprojects";
 import TestimonialCarousel from "@/components/Testimonials";
 import JoinerSteps, { StepCard } from "@/components/JoinerSteps";
+import FloatingCTA from "@/components/FloatingCTA";
 
 
 const stepsData: StepCard[] = [
@@ -140,5 +141,7 @@ export default function SwagPacks() {
         <CorporateGiftingSolutions />
 
         <BrandsWeRepresent />
+
+        <FloatingCTA type="connect"/>
     </>;
 }

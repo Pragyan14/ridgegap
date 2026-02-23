@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import BlogList from "@/components/BlogList";
+import FloatingCTA from "@/components/FloatingCTA";
 
 const POSTS_PER_PAGE = 10;
 
@@ -22,10 +23,13 @@ export default async function BlogPage() {
   });
 
   return (
-    <BlogList
-      blogs={blogs}
-      currentPage={currentPage}
-      totalPages={totalPages}
-    />
+    <>
+      <BlogList
+        blogs={blogs}
+        currentPage={currentPage}
+        totalPages={totalPages}
+      />
+      <FloatingCTA type="connect" />
+    </>
   );
 }

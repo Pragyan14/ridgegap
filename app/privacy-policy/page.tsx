@@ -1,5 +1,7 @@
 'use client';
 
+import FloatingCTA from "@/components/FloatingCTA";
+
 // ── Shared style constants ──
 const paragraphClass = 'text-gray-700 text-[15px] leading-relaxed';
 const headingClass   = 'text-xl font-bold text-[#1e3a8a] mt-4 mb-1';
@@ -155,6 +157,8 @@ export default function ContactsPage() {
 
         </div>
       </section>
+
+      <FloatingCTA/>
     </div>
   );
 }

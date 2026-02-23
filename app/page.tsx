@@ -4,6 +4,7 @@ import CompanyLogos from "@/components/CompanyLogo";
 import CorporateGiftingSolutions from "@/components/Corporategiftingsolutions";
 import CTAForm from "@/components/Ctaform";
 import FAQ from "@/components/FAQ";
+import FloatingCTA from "@/components/FloatingCTA";
 import GetInTouch from "@/components/Getintouch";
 import Hero from "@/components/Hero";
 import MostPopularGifting from "@/components/Mostpopulargifting";
@@ -31,6 +32,7 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <BrandsWeRepresent />
+      <FloatingCTA type="connect"/>
     </div>
   );
 }

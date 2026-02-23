@@ -36,10 +36,11 @@ model Lead {
   phone      String
   email      String
   message    String
-  source     String?  
-  status     String   @default("new") 
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  source     String?
+  pageUrl    String?   
+  status     String    @default("new")
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
 
   @@map("lead")
 }

@@ -1,3 +1,4 @@
+import FloatingCTA from "@/components/FloatingCTA";
 import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 
@@ -103,6 +104,8 @@ export default async function BlogDetail({
 
         </div>
       </div>
+
+      <FloatingCTA type="connect"/>
     </>
   );
 }

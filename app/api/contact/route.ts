@@ -5,7 +5,15 @@ import { sendLeadNotificationEmail } from "@/lib/mail";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { fullName, phone, email, message } = body;
+
+    const {
+      fullName,
+      phone,
+      email,
+      message,
+      source,
+      pageUrl, // ✅ Extract from body
+    } = body;
 
     if (!fullName || !phone || !email || !message) {
       return NextResponse.json(
@@ -20,7 +28,8 @@ export async function POST(req: Request) {
         phone,
         email,
         message,
-        source: "website",
+        source: source || "website", // ✅ fallback
+        pageUrl: pageUrl || null,    // ✅ prevent crash
       },
     });
 
@@ -28,8 +37,8 @@ export async function POST(req: Request) {
       fullName,
       phone,
       email,
-      message
-    })
+      message,
+    });
 
     return NextResponse.json(
       { success: true, leadId: lead.id },
