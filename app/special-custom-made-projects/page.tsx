@@ -1,91 +1,84 @@
-'use client'
+import SpecialCustomMadeProjects from "./SpecialCustomMadeProjects";
+import { Metadata } from "next";
 
-import BrandsWeRepresent from "@/components/BrandsWeRepresent";
-import CompanyLogos from "@/components/CompanyLogo";
-import CorporateGiftingSolutions from "@/components/Corporategiftingsolutions";
-import FloatingCTA from "@/components/FloatingCTA";
-import MostPopularGifting from "@/components/Mostpopulargifting";
-import ProductBenefit from "@/components/ProductBenfits";
-import ProductHero from "@/components/ProductHero";
-import RecentProjects from "@/components/Recentprojects";
-import TestimonialCarousel from "@/components/Testimonials";
+export const metadata: Metadata = {
+  title: "Tailor-Made Gifts | RidgeGap - exclusive custom made gifts",
+  description:
+    "Celebrate special occasions with custom made gifts. Personalize your presents and make every moment unforgettable with RidgeGap's unique gift options.",
+  alternates: {
+    canonical: "https://ridgegap.com/special-custom-made-projects/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Tailor-Made Gifts | RidgeGap - exclusive custom made gifts",
+    description:
+      "Celebrate special occasions with custom made gifts. Personalize your presents and make every moment unforgettable with RidgeGap's unique gift options.",
+    url: "https://ridgegap.com/special-custom-made-projects/",
+    siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
+    images: [
+      {
+        url: "https://ridgegap.com/wp-content/uploads/2023/05/custom-made-projects-slider-mobile2.jpg",
+        width: 1248,
+        height: 641,
+        alt: "custom made gifts",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tailor-Made Gifts | RidgeGap - exclusive custom made gifts",
+    description:
+      "Celebrate special occasions with custom made gifts. Personalize your presents and make every moment unforgettable with RidgeGap's unique gift options.",
+    images: [
+      "https://ridgegap.com/wp-content/uploads/2023/05/custom-made-projects-slider-mobile2.jpg",
+    ],
+  },
+};
 
-const benefits = [
-    {
-        icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/increase-positivity-motivation-boost-ico.png',
-        alt: 'positive-attitude',
-        text: 'Long-lasting and positive effect on your customers.',
-    },
-    {
-        icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/build-maintain-strengthen-relationship-ico.png',
-        alt: 'impression-rate',
-        text: 'Shows appreciation, strengthen relationships.',
-    },
-    {
-        icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/nurturing-connections-ico.png',
-        alt: 'customer-retention',
-        text: "Stay present in your clients’ & employees’ lives.",
-    },
-    {
-        icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/express-goodwill-ico.png',
-        alt: 'network',
-        text: 'Indisputably grabs everyone’s attention.',
-    },
-    {
-        icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/cost-efficient-way-ico.png',
-        alt: 'career',
-        text: 'Comes with Exquisite Packaging.',
-    },
-    {
-        icon: 'https://ridgegap.com/wp-content/uploads/2025/04/value-proposition.png',
-        alt: 'career',
-        text: 'Unique and eye-catching.',
-    },
-    {
-        icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/endorse-company-ico.png',
-        alt: 'career',
-        text: 'Makes Your Brand Stand Out.',
-    },
-    {
-        icon: 'https://ridgegap.com/wp-content/uploads/2025/04/customer-service.png',
-        alt: 'career',
-        text: 'Delivers value to your workforce and clients.',
-    },
-    {
-        icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/quality-budget-ico.png',
-        alt: 'career',
-        text: 'High quality branded products.',
-    },
-];
+export default function Page() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id":
+      "https://ridgegap.com/special-custom-made-projects/#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@id": "https://ridgegap.com",
+          name: "Home",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@id":
+            "https://ridgegap.com/special-custom-made-projects/",
+          name: "Special & Custom-Made Projects",
+        },
+      },
+    ],
+  };
 
-export default function CustomMadeProjects() {
-    return <>
+  return (
+    <>
+      {/* JSON-LD Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
 
-        <ProductHero
-            backgroundImage="https://ridgegap.com/wp-content/uploads/2025/05/Special-custom-Projects-banner-scaled.jpg"
-            heading="Add a Touch of Elegance to your Gifting with Custom made & special projects."
-            subheading="At Ridgegap corporate gifting solutions we have the expertise and knowledge to turn your exact vision into reality."
-            buttonMessage="Request a quote it take 2min!"
-        />
-
-        <CompanyLogos />
-
-        <RecentProjects />
-
-        <ProductBenefit
-            benefits={benefits}
-            subtitle={"Why are Welcome Packs so important?"}
-            title={"Benefits of new joiner welcome packs"}
-        />
-
-        <MostPopularGifting />
-
-        <TestimonialCarousel />
-
-        <CorporateGiftingSolutions />
-
-        <BrandsWeRepresent />
-
-        <FloatingCTA type="connect"/>
-    </>;
+      {/* Page Component */}
+      <SpecialCustomMadeProjects />
+    </>
+  );
 }

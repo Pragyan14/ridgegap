@@ -28,10 +28,10 @@ export default function ProductHero({
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 w-full">
+      <div className="relative z-10 mx-auto flex flex-col md:flex-row items-center w-full">
 
         {/* Left Content */}
-        <div className="w-full md:w-1/2 text-white max-w-5xl text-center md:text-left">
+        <div className="w-full md:w-2/3 text-white max-w-5xl text-center md:text-left">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold mb-6 leading-tight">
             {heading}
           </h1>
@@ -44,7 +44,7 @@ export default function ProductHero({
         </div>
 
         {/* Empty right column for layout balance */}
-        <div className="hidden md:block md:w-1/2" />
+        <div className="hidden md:block md:w-1/3" />
       </div>
     </section>
   );

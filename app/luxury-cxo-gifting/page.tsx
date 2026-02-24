@@ -1,65 +1,84 @@
-'use client'
+import LuxuryCXOGifting from "./LuxuryCXOGifting";
+import { Metadata } from "next";
 
-import BrandsWeRepresent from "@/components/BrandsWeRepresent";
-import CompanyLogos from "@/components/CompanyLogo";
-import CorporateGiftingSolutions from "@/components/Corporategiftingsolutions";
-import MostPopularGifting from "@/components/Mostpopulargifting";
-import ProductHero from "@/components/ProductHero";
-import RecentProjects from "@/components/Recentprojects";
-import TestimonialCarousel from "@/components/Testimonials";
-import JoinerSteps, { StepCard } from "@/components/JoinerSteps";
-import FloatingCTA from "@/components/FloatingCTA";
+export const metadata: Metadata = {
+  title: "Luxury Corporate and CXO Gifting Solutions - RidgeGap",
+  description:
+    "Impress your clients and enhance business relationships with our exquisite luxury corporate gifts. Gifts that will wow your clients, Discover now.",
+  alternates: {
+    canonical: "https://ridgegap.com/luxury-cxo-gifting/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title:
+      "Elevate client Relationships with Luxury Corporate Gifts - RidgeGap",
+    description:
+      "Impress your clients and enhance business relationships with our exquisite luxury corporate gifts. Gifts that will wow your clients, Discover now.",
+    url: "https://ridgegap.com/luxury-cxo-gifting/",
+    siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
+    images: [
+      {
+        url: "https://ridgegap.com/wp-content/uploads/2023/05/luxury-gifting-slider-mobile1.jpg",
+        width: 1248,
+        height: 641,
+        alt: "CXO Gifting",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Elevate client Relationships with Luxury Corporate Gifts - RidgeGap",
+    description:
+      "Impress your clients and enhance business relationships with our exquisite luxury corporate gifts. Gifts that will wow your clients, Discover now.",
+    images: [
+      "https://ridgegap.com/wp-content/uploads/2023/05/luxury-gifting-slider-mobile1.jpg",
+    ],
+  },
+};
 
+export default function Page() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://ridgegap.com/luxury-cxo-gifting/#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@id": "https://ridgegap.com",
+          name: "Home",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@id": "https://ridgegap.com/luxury-cxo-gifting/",
+          name: "Luxury & CXO Gifting",
+        },
+      },
+    ],
+  };
 
-const stepsData: StepCard[] = [
-    {
-        iconUrl: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/content-ico.png",
-        altText: "Content Icon",
-        title: "Need",
-        description: "Based on your specific luxury gifting requirements, you can use this review to determine the best possible options for your client."
-    },
-    {
-        iconUrl: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/design-branding-ico.png",
-        altText: "Design & Branding Icon",
-        title: "Evaluate",
-        description: "Internal steps like self-evaluation and brand selection can lead to a pretty accurate model of the kind of person they are – and what they expect."
-    },
-    {
-        iconUrl: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/order-ico.png",
-        altText: "Order Icon",
-        title: "Decide",
-        description: "This information will allow you to be more confident in narrowing down your choices."
-    },
-];
+  return (
+    <>
+      {/* JSON-LD Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
 
-export default function LuxuryCxoGifting() {
-    return <>
-
-        <ProductHero
-            backgroundImage="https://ridgegap.com/wp-content/uploads/2025/05/Luxury-CXO-Gifts-banners-scaled.jpg"
-            heading="Delight your clients with an Impressive Luxury Corporate Gift."
-            subheading="The ideal gift should be personal, intentional and practical. Let us guide you toward a truly successful gifting experience."
-            buttonMessage="Request a quote it take 2min!"
-        />
-
-        <CompanyLogos />
-
-        <JoinerSteps
-            mainImageUrl="https://ridgegap.com/wp-content/uploads/2025/05/curated-gift-image.png"
-            heading="How to identify what is the best luxury corporate gift?"
-            steps={stepsData}
-        />
-
-        <RecentProjects />
-
-        <MostPopularGifting />
-
-        <TestimonialCarousel />
-
-        <CorporateGiftingSolutions />
-
-        <BrandsWeRepresent />
-
-        <FloatingCTA type="connect"/>
-    </>;
+      {/* Page Component */}
+      <LuxuryCXOGifting />
+    </>
+  );
 }

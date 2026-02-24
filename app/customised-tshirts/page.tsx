@@ -1,71 +1,82 @@
-'use client'
+import CustomisedTshirts from "./CustomisedTshirts";
+import { Metadata } from "next";
 
-import BrandsWeRepresent from "@/components/BrandsWeRepresent";
-import CompanyLogos from "@/components/CompanyLogo";
-import CorporateGiftingSolutions from "@/components/Corporategiftingsolutions";
-import FloatingCTA from "@/components/FloatingCTA";
-import MostPopularGifting from "@/components/Mostpopulargifting";
-import ProductHero from "@/components/ProductHero";
-import ProductsFeatures, { FeatureItem } from "@/components/ProductsFeatures";
-import RecentProjects from "@/components/Recentprojects";
-import TestimonialCarousel from "@/components/Testimonials";
+export const metadata: Metadata = {
+  title: "Customized T-Shirts for Corporates in Bangalore | RidgeGap",
+  description:
+    "Get customised T-shirts for your team in Bangalore. RidgeGap offers high-quality prints, bulk orders, and logo branding for corporate gifting needs.",
+  alternates: {
+    canonical: "https://ridgegap.com/customised-tshirts/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Personalized Apparel for Corporate Identity - RidgeGap",
+    description:
+      "Unify your team and showcase your brand with our customized apparel. From tshirts to branded clothing, discover RidgeGap's apparel customization.",
+    url: "https://ridgegap.com/customised-tshirts/",
+    siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
+    images: [
+      {
+        url: "https://ridgegap.com/wp-content/uploads/2023/05/customised-tshirts-slider-mobile1.jpg",
+        width: 1248,
+        height: 641,
+        alt: "Customized T-Shirts",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Personalized Apparel for Corporate Identity - RidgeGap",
+    description:
+      "Unify your team and showcase your brand with our customized apparel. From tshirts to branded clothing, discover RidgeGap's apparel customization.",
+    images: [
+      "https://ridgegap.com/wp-content/uploads/2023/05/customised-tshirts-slider-mobile1.jpg",
+    ],
+  },
+};
 
+export default function Page() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://ridgegap.com/customised-tshirts/#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@id": "https://ridgegap.com",
+          name: "Home",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@id": "https://ridgegap.com/customised-tshirts/",
+          name: "Customised Tshirts",
+        },
+      },
+    ],
+  };
 
-const featuresData: FeatureItem[] = [
-    {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/distribution-center.png",
-        html: "Vast range of materials – For regular wear, formal wear, sportswear, winter or summer.",
-    },
-    {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/delivery-service.png",
-        html: "Distribution – Individually packed and shipped direct to your employees.",
-    },
-    {
-        icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/customization-ico.png",
-        html: "Vast color options – select based on your brand guidelines.",
-    },
-    {
-        icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/warehouse-facility-ico.png",
-        html: "Storage – Options to store the products at our warehouse so you don’t have to take the hassle.",
-    },
-    {
-        icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/branded-ico.png",
-        html: "Huge range of products – 30+ brands to choose from like Adidas, puma, marks & spencer’s, jack & jones, US polo, arrow, FCUK.",
-    },
-    {
-        icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/personalized-ico.png",
-        html: "Personalised – branded with your logo.",
-    },
-];
+  return (
+    <>
+      {/* JSON-LD Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
 
-export default function CustomisedTshirts() {
-    return <>
-
-        <ProductHero
-            backgroundImage="https://ridgegap.com/wp-content/uploads/2025/05/Customised-Tshirts-banner-scaled.jpg"
-            heading="Customised T-shirts, hoodies & jackets is a unique way to express yourself."
-            subheading="Whether you are looking for business attire, casual wear or custom sports apparel. We have different types available with your company logo branded on them!"
-            buttonMessage="Request a quote it take 2min!"
-        />
-
-        <CompanyLogos />
-
-        <RecentProjects />
-
-        <MostPopularGifting />
-
-        <ProductsFeatures
-            features={featuresData}
-            heading="Features"
-            subheading="Customised T-shirts, hoodies and jackets is a unique way to express yourself. Whether you are looking for business attire, casual wear or custom sports apparel. We have different types available with your company logo branded on them!"
-        />
-
-        <TestimonialCarousel />
-
-        <CorporateGiftingSolutions />
-
-        <BrandsWeRepresent />
-
-        <FloatingCTA type="connect" />
-    </>;
+      {/* Page Component */}
+      <CustomisedTshirts />
+    </>
+  );
 }

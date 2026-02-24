@@ -1,102 +1,86 @@
-'use client'
+import SustainableEcoFriendlyGifting from "./SustainableEcoFriendlyGifting";
+import { Metadata } from "next";
 
-import BrandsWeRepresent from "@/components/BrandsWeRepresent";
-import CompanyLogos from "@/components/CompanyLogo";
-import CorporateGiftingSolutions from "@/components/Corporategiftingsolutions";
-import MostPopularGifting from "@/components/Mostpopulargifting";
-import ProductBenefit from "@/components/ProductBenfits";
-import ProductHero from "@/components/ProductHero";
-import ProductsFeatures, { FeatureItem } from "@/components/ProductsFeatures";
-import RecentProjects from "@/components/Recentprojects";
-import TestimonialCarousel from "@/components/Testimonials";
-import JoinerSteps, { StepCard } from "@/components/JoinerSteps";
-import FloatingCTA from "@/components/FloatingCTA";
+export const metadata: Metadata = {
+  title: "Promote Sustainability with Eco-friendly Corporate Gifts",
+  description:
+    "Choose eco-friendly alternatives with our sustainable corporate gift options. Make a positive impact on the planet and align your brand with sustainability.",
+  alternates: {
+    canonical: "https://ridgegap.com/sustainable-eco-friendly-gifting/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title:
+      "Promote Sustainability with Eco-friendly Corporate Gifts - RidgeGap",
+    description:
+      "Choose eco-friendly alternatives with our sustainable corporate gift options. Make a positive impact on the planet and align your brand with sustainability.",
+    url: "https://ridgegap.com/sustainable-eco-friendly-gifting/",
+    siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
+    images: [
+      {
+        url: "https://ridgegap.com/wp-content/uploads/2023/05/sustainable-products-slider-mobile2.jpg",
+        width: 1248,
+        height: 641,
+        alt: "eco-friendly",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Promote Sustainability with Eco-friendly Corporate Gifts - RidgeGap",
+    description:
+      "Choose eco-friendly alternatives with our sustainable corporate gift options. Make a positive impact on the planet and align your brand with sustainability.",
+    images: [
+      "https://ridgegap.com/wp-content/uploads/2023/05/sustainable-products-slider-mobile2.jpg",
+    ],
+  },
+};
 
+export default function Page() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id":
+      "https://ridgegap.com/sustainable-eco-friendly-gifting/#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@id": "https://ridgegap.com",
+          name: "Home",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@id":
+            "https://ridgegap.com/sustainable-eco-friendly-gifting/",
+          name: "Sustainable & Eco-Friendly Gifting",
+        },
+      },
+    ],
+  };
 
-const stepsData: StepCard[] = [
-    {
-        iconUrl: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/content-ico.png",
-        altText: "Content Icon",
-        title: "Build your gift box",
-        description: "Choose from over 150 impactful products to create the perfect gift box for your employees or clients."
-    },
-    {
-        iconUrl: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/design-branding-ico.png",
-        altText: "Design & Branding Icon",
-        title: "Add personalisation",
-        description: "Add your logo to the gift box, message card or add an everyday branded product."
-    },
-    {
-        iconUrl: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/order-ico.png",
-        altText: "Order Icon",
-        title: "Ready in 3-10 days",
-        description: "Bulk-ship to one location or ship individually to employee or client addresses."
-    },
-];
+  return (
+    <>
+      {/* JSON-LD Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
 
-const featuresData: FeatureItem[] = [
-    {
-        icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/brand-ico.png",
-        html: "Create a positive brand image",
-    },
-    {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/tailored-services.png",
-        html: "Reinforce your company’s values.",
-    },
-    {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/reduce.png",
-        html: "Reduce carbon footprint.",
-    },
-    {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/customer-service.png",
-        html: "Encourage others to live more sustainably.",
-    },
-    {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/brand-awareness.png",
-        html: "Strengthen your position as a conscious company.",
-    },
-    {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/eco-friendly.png",
-        html: "Reduce waste and embrace an Earth-friendly lifestyle.",
-    },
-    {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/environmental.png",
-        html: "Make an environmental impact and make a difference in the world.",
-    },
-    {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/processing.png",
-        html: "Encourage recycle and reuse.",
-    },
-];
-
-export default function SustainableGifting() {
-    return <>
-
-        <ProductHero
-            backgroundImage="https://ridgegap.com/wp-content/uploads/2025/05/Curated-Gift-boxes-Banner-page-scaled.jpg"
-            heading="Sustainable gifting is a great way to celebrate any occasion by helping your clients or employees reduce their impact."
-            subheading="If you want to make an environmental impact and make a difference in the world, then Sustainable Gifts are a perfect gift to give."
-            buttonMessage="Request a quote it take 2min!"
-        />
-
-        <CompanyLogos />
-
-        <RecentProjects />
-
-        <MostPopularGifting />
-
-        <ProductsFeatures
-            features={featuresData}
-            heading="Features"
-            subheading="Reason to choose sustainable gifts for your brand Our sustainable products help reduce the environmental impact of your business. These offerings include everything from stylish reusable drink ware, notebooks, pens, giftsets and even gourmet treats."
-        />
-
-        <TestimonialCarousel />
-
-        <CorporateGiftingSolutions />
-
-        <BrandsWeRepresent />
-
-        <FloatingCTA type="connect"/>
-    </>;
+      {/* Page Component */}
+      <SustainableEcoFriendlyGifting />
+    </>
+  );
 }
