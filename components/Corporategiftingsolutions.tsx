@@ -76,7 +76,7 @@ export default function CorporateGiftingSolutions() {
         style={{
           backgroundImage:
             "url('https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/bgn-pattern.png')",
-          opacity: 100, // increase if needed (0.2 or 0.25)
+          opacity: 100,
         }}
       />
 
