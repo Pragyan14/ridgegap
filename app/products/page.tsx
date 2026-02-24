@@ -25,11 +25,11 @@ export default function ProductsPage() {
 
       <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
         {/* Left Text Content */}
-        <div className="w-full md:w-1/2 text-white max-w-lg mx-auto md:mx-0 text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl font-serif font-bold leading-tight mb-6">
+        <div className="w-full md:w-1/ max-w-lg mx-auto md:mx-0 text-center md:text-left">
+          <h1 className="text-3xl text-white sm:text-4xl font-serif font-bold leading-tight mb-6">
             Unwrap the Joy of Giving with Our Corporate Gifting products.
           </h1>
-          <p className="text-lg mb-8">
+          <p className="text-white text-lg mb-8">
             Find the perfect corporate gift for your employees and clients with Ridge gap with 5000+ innovative products to choose from.
           </p>
           <CTABtn message={"Request a quote it takes 2 min!"} />
