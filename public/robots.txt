@@ -57,4 +57,4 @@ Disallow: /
 
 # END Cloudflare Managed Content
 
-Sitemap: https://ridgegap.vercel.app/sitemap.xml
+Sitemap: https://ridgegap.com/sitemap.xml

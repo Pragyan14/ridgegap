@@ -240,7 +240,6 @@ export default function FAQSection() {
                 number={index + 7}
                 question={faq.question}
                 answer={faq.answer}
-                highlighted={index === 0}
               />
             ))}
           </div>
