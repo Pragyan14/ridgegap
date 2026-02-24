@@ -27,6 +27,26 @@ const nextConfig: NextConfig = {
         destination: '/about-us',
         permanent: true
       },
+      {
+        source: '/contact',
+        destination: '/contact-us',
+        permanent: true
+      },
+      {
+        source: '/corporate-gifts',
+        destination: '/',
+        permanent: true
+      },
+      {
+        source: '/corporate-gifts-2k-3k',
+        destination: '/',
+        permanent: true
+      },
+      {
+        source: '/christmas-new-year-corporate-gifts',
+        destination: '/',
+        permanent: true
+      },
     ]
   },
 };
