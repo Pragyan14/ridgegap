@@ -122,7 +122,7 @@ export default function ContactPopup({ type, onClose }: Props) {
         <h2 className="text-2xl font-bold text-[#1e3a8a] mb-6">
           {type === "catalogue"
             ? "Fill the below form to Download the Catalogue:"
-            : "Fill the below Contact Form:"}
+            : "Fill the below form to get a Quote:"}
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-5">

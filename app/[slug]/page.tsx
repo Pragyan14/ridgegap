@@ -5,6 +5,7 @@ import ProductGrid, { CardItem } from "@/components/ProductGrid";
 import CTABtn from "@/components/ui/CTABtn";
 import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 
 interface Props {
   params: Promise<{
