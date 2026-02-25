@@ -17,7 +17,7 @@ export default function ProductHero({
 }: ProductHeroProps) {
   return (
     <section
-      className="relative min-h-[500px] flex items-center px-6 sm:px-12 lg:px-24 overflow-hidden"
+      className="relative min-h-125 flex items-center px-6 sm:px-12 lg:px-24 overflow-hidden"
       style={{
         backgroundImage: `url('${backgroundImage}')`,
         backgroundRepeat: "no-repeat",
@@ -31,12 +31,12 @@ export default function ProductHero({
       <div className="relative z-10 mx-auto flex flex-col md:flex-row items-center w-full">
 
         {/* Left Content */}
-        <div className="w-full md:w-2/3 text-white max-w-5xl text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold mb-6 leading-tight">
+        <div className="w-full md:w-2/3  max-w-5xl text-center md:text-left">
+          <h1 className="text-3xl sm:text-4xl text-white lg:text-5xl font-serif font-bold mb-6 leading-tight">
             {heading}
           </h1>
 
-          <p className="text-base sm:text-lg mb-8 leading-relaxed">
+          <p className="text-base text-white sm:text-lg mb-8 leading-relaxed">
             {subheading}
           </p>
 

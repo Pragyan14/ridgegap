@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { MapPin, Mail, Phone, Instagram, Facebook, ArrowRight } from 'lucide-react';
-import ContactPopup from './ContactPopup';
+import ContactPopup from './ui/ContactPopup';
 
 const instagramPosts = [
   {

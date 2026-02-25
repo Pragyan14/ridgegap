@@ -1,5 +1,6 @@
 'use client';
 
+import ContactForm from "@/components/Contactform";
 import FloatingCTA from "@/components/FloatingCTA";
 import ProductCategories from "@/components/Productcategories";
 import TestimonialCarousel from "@/components/Testimonials";
@@ -45,6 +46,8 @@ export default function ProductsPage() {
     <WhyChooseUs/>
 
     <TestimonialCarousel/>
+
+    <ContactForm/>
 
     <FloatingCTA type="connect"/>
     </>

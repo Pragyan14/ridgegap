@@ -10,22 +10,22 @@ import Image from "next/image";
 
 export default function CorporateDiwaliGifts() {
   const images = [
-    "https://ridgegap.com/wp-content/uploads/2025/06/diwali-special-500-1000.jpg",
-    "https://ridgegap.com/wp-content/uploads/2025/06/diwali-special-1000-2000.jpg",
-    "https://ridgegap.com/wp-content/uploads/2025/06/diwali-special-2000-4000.jpg",
-    "https://ridgegap.com/wp-content/uploads/2025/06/diwali-special-2000-7000.jpg",
-    "https://ridgegap.com/wp-content/uploads/2025/06/diwali-special-500-2000.jpg",
+    "/images/diwali-special-500-1000.jpg",
+    "/images/diwali-special-1000-2000.jpg",
+    "/images/diwali-special-2000-4000.jpg",
+    "/images/diwali-special-2000-7000.jpg",
+    "/images/diwali-special-500-2000.jpg",
   ];
 
   const items = [
-    "https://ridgegap.com/wp-content/uploads/2025/07/diwali-gifts-img1.jpeg",
-    "https://ridgegap.com/wp-content/uploads/2025/07/diwali-gifts-img2.jpeg",
-    "https://ridgegap.com/wp-content/uploads/2025/07/diwali-gifts-img3.jpeg",
-    "https://ridgegap.com/wp-content/uploads/2025/07/diwali-gifts-img4.jpeg",
-    "https://ridgegap.com/wp-content/uploads/2025/07/diwali-gifts-img5.jpeg",
-    "https://ridgegap.com/wp-content/uploads/2025/07/diwali-gifts-img6.jpeg",
-    "https://ridgegap.com/wp-content/uploads/2025/07/diwali-gifts-img7.jpeg",
-    "https://ridgegap.com/wp-content/uploads/2025/07/diwali-gifts-img8.jpeg",
+    "/images/diwali-gifts-img1.jpeg",
+    "/images/diwali-gifts-img2.jpeg",
+    "/images/diwali-gifts-img3.jpeg",
+    "/images/diwali-gifts-img4.jpeg",
+    "/images/diwali-gifts-img5.jpeg",
+    "/images/diwali-gifts-img6.jpeg",
+    "/images/diwali-gifts-img7.jpeg",
+    "/images/diwali-gifts-img8.jpeg",
   ]
 
   return (<>

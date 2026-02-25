@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import CTABtn from "./ui/CTABtn";
 
 export default function Hero() {
@@ -10,7 +11,7 @@ export default function Hero() {
         className="relative py-16 md:py-24 lg:py-32 overflow-hidden bg-repeat"
         style={{
           backgroundImage:
-            'url("https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/slider-pattern-bg.png")',
+            'url("/images/slider-pattern-bg.png")',
         }}
       >
         {/* Optional Light Overlay for better text visibility */}
@@ -18,7 +19,7 @@ export default function Hero() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            
+
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-4">
@@ -91,32 +92,41 @@ export default function Hero() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
-                    <img
-                      src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/new-slider-hero-1.jpg"
-                      alt="Curated Gift Boxes"
+                    <Image
+                      src="/images/new-slider-hero-1.jpg"
+                      alt="Curated Corporate Gift Boxes"
+                      width={600}
+                      height={600}
                       className="w-full h-full object-cover"
+                      priority
                     />
                   </div>
                   <div className="overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
-                    <img
-                      src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/new-slider-hero-3.jpg"
-                      alt="Swag Packs"
+                    <Image
+                      src="/images/new-slider-hero-3.jpg"
+                      alt="Corporate Swag Packs"
+                      width={600}
+                      height={600}
                       className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
                 <div className="space-y-4 mt-8">
                   <div className="overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
-                    <img
-                      src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/new-slider-hero-2.jpg"
-                      alt="New Joiner Kits"
+                    <Image
+                      src="/images/new-slider-hero-2.jpg"
+                      alt="New Joiner Corporate Kits"
+                      width={600}
+                      height={600}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
-                    <img
-                      src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/new-slider-hero-4.jpg"
-                      alt="Office Stationeries"
+                    <Image
+                      src="/images/new-slider-hero-4.jpg"
+                      alt="Branded Office Stationery Gifts"
+                      width={600}
+                      height={600}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -131,47 +141,6 @@ export default function Hero() {
           </div>
         </div>
       </section>
-
-      {/* Company Logos Section */}
-      {/* <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-center text-2xl font-semibold text-gray-900 mb-8">
-            You're in Good Company
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 transition-all">
-            <img
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/google-showlogimg.png"
-              alt="Google"
-              className="h-8 md:h-10 w-auto object-contain"
-            />
-            <img
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/amazon-showlogimg.png"
-              alt="Amazon"
-              className="h-8 md:h-10 w-auto object-contain"
-            />
-            <img
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/mercedes-benz-showlogimg.png"
-              alt="Mercedes-Benz"
-              className="h-8 md:h-10 w-auto object-contain"
-            />
-            <img
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/jpmorgan-showlogimg.png"
-              alt="JPMorgan"
-              className="h-8 md:h-10 w-auto object-contain"
-            />
-            <img
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/bigbasket-showlogimg.png"
-              alt="BigBasket"
-              className="h-8 md:h-10 w-auto object-contain"
-            />
-            <img
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/unacademy-showlogimg.png"
-              alt="Unacademy"
-              className="h-8 md:h-10 w-auto object-contain"
-            />
-          </div>
-        </div>
-      </section> */}
     </>
   );
 }

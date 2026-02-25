@@ -1,3 +1,4 @@
+import ContactForm from "@/components/Contactform";
 import FloatingCTA from "@/components/FloatingCTA";
 import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
@@ -106,6 +107,7 @@ export default async function BlogDetail({
       </div>
 
       <FloatingCTA type="connect"/>
+      <ContactForm/>
     </>
   );
 }

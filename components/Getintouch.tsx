@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import CTABtn from "./ui/CTABtn";
 
 export default function GetInTouch() {
@@ -22,19 +23,24 @@ export default function GetInTouch() {
 
             {/* Main product collage image — circle crop, right side */}
             <div className="absolute top-4 right-0 md:right-4 w-60 h-60 md:w-75 md:h-75 rounded-full overflow-hidden z-20 shadow-xl">
-              <img
-                src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/cg-gifting-showcase-1.png"
+              <Image
+                src="/images/cg-gifting-showcase-1.png"
                 alt="Corporate Gifting Products"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 400px"
+                priority={false}
               />
             </div>
 
             {/* Jacket / Apparel image — left center */}
             <div className="absolute top-[30%] left-0 w-35 h-42.5 md:w-45 md:h-52.5 rounded-xl overflow-hidden z-20 shadow-lg">
-              <img
-                src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/works/all-works/our-works-showcase-7.jpg"
-                alt="Customised Apparel"
-                className="w-full h-full object-cover"
+              <Image
+                src="/images/our-works-showcase-7.jpg"
+                alt="customised-corporate-apparel-bangalore"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 300px"
               />
             </div>
 

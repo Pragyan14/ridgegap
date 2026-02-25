@@ -2,25 +2,23 @@ import CorporateDiwaliGifts from "./CorporateDiwaliGifts";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ridgegap.com"),
+
   title: "Corporate Diwali Gifts for Clients & Employees | RidgeGap",
-  description:
-    "Discover unique Diwali gift ideas for employees and clients. Strengthen professional relationships with thoughtful corporate Diwali gifts.",
+  description: "Discover unique Diwali gift ideas for employees and clients. Strengthen professional relationships with thoughtful corporate Diwali gifts.",
+
   alternates: {
-    canonical: "https://ridgegap.com/corporate-diwali-gifts/",
+    canonical: "/corporate-diwali-gifts/",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+
   openGraph: {
     title: "Corporate Diwali Gifts: Delight Employees and Clients",
-    description:
-      "Discover unique Diwali gift ideas for employees and clients. Strengthen professional relationships with thoughtful corporate Diwali gifts.",
-    url: "https://ridgegap.com/corporate-diwali-gifts/",
+    description: "Discover unique Diwali gift ideas for employees and clients.",
+    url: "/corporate-diwali-gifts/",
     siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
     images: [
       {
-        url: "https://ridgegap.com/wp-content/uploads/2023/07/diwali-corporate-gifting-solutions-banner.jpg",
+        url: "/images/diwali-corporate-gifting-solutions-banner.jpg",
         width: 1920,
         height: 576,
         alt: "Corporate Diwali Gifts",
@@ -29,14 +27,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "article",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Corporate Diwali Gifts: Delight Employees and Clients",
-    description:
-      "Discover unique Diwali gift ideas for employees and clients. Strengthen professional relationships with thoughtful corporate Diwali gifts.",
-    images: [
-      "https://ridgegap.com/wp-content/uploads/2023/07/diwali-corporate-gifting-solutions-banner.jpg",
-    ],
+    description: "Discover unique Diwali gift ideas for employees and clients.",
+    images: ["/images/diwali-corporate-gifting-solutions-banner.jpg"],
   },
 };
 

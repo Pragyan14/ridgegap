@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import BlogList from "@/components/BlogList";
 import { notFound } from "next/navigation";
 import FloatingCTA from "@/components/FloatingCTA";
+import ContactForm from "@/components/Contactform";
 
 const POSTS_PER_PAGE = 10; // adjust as needed
 
@@ -46,6 +47,7 @@ export default async function PaginatedPage({
         currentPage={pageNumber}
         totalPages={totalPages}
       />
+      <ContactForm/>
       <FloatingCTA type="connect" />
     </>
 

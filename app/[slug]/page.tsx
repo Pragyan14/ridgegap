@@ -57,11 +57,11 @@ export default async function ProductCategoryPage({ params }: Props) {
         <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 w-full">
 
           {/* Left Content */}
-          <div className="w-full md:w-1/2 text-white max-w-lg text-center md:text-left">
-            <h1 className="text-6xl font-serif font-bold mb-6">
+          <div className="w-full md:w-1/2  max-w-lg text-center md:text-left">
+            <h1 className="text-6xl text-white font-serif font-bold mb-6">
               {productPage.h1}
             </h1>
-            <p className="text-lg mb-8 leading-relaxed">
+            <p className="text-lg text-white mb-8 leading-relaxed">
               Find the perfect corporate gift for your employees and clients with Ridge gap with 5000+ innovative products to choose from.
             </p>
             <CTABtn message={"Download Catalogue"} />
@@ -89,13 +89,11 @@ export default async function ProductCategoryPage({ params }: Props) {
         </div>
       ))}
 
-      <div className="bg-red-500">
-        <ContactForm />
-      </div>
+      <ContactForm />
 
-      <BrandsWeRepresent/>
+      <BrandsWeRepresent />
 
-      <FloatingCTA type="catalogue"/>
+      <FloatingCTA type="catalogue" />
     </>
   );
 }

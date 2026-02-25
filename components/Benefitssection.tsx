@@ -1,50 +1,52 @@
 'use client';
 
+import Image from "next/image";
+
 const benefits = [
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/thankyou-corporate-gift-ico.png',
-    alt: 'thankyou-corporate-gift',
+    icon: "/images/thankyou-corporate-gift-ico.png",
+    alt: "thankyou-corporate-gift",
     text: 'Corporate gifting is a great way to say "thanks" to employees, clients & partners. And builds goodwill, loyalty, & brand recognition.',
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/increase-positivity-motivation-boost-ico.png',
-    alt: 'increase-positivity-motivation-boost',
-    text: 'It increases the positivity and motivation of employees. Corporate gifts are a great method to boost employee morale.',
+    icon: "/images/increase-positivity-motivation-boost-ico.png",
+    alt: "increase-positivity-motivation-boost",
+    text: "It increases the positivity and motivation of employees. Corporate gifts are a great method to boost employee morale.",
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/nurturing-connections-ico.png',
-    alt: 'nurturing-connections',
+    icon: "/images/nurturing-connections-ico.png",
+    alt: "nurturing-connections",
     text: "It's an excellent way to start and continue nurturing all your connections and relationships with clients and customers.",
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/express-goodwill-ico.png',
-    alt: 'express-goodwill',
-    text: 'Express goodwill in general.',
+    icon: "/images/express-goodwill-ico.png",
+    alt: "express-goodwill",
+    text: "Express goodwill in general.",
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/outreach-business-connections-ico.png',
-    alt: 'outreach-business-connections',
-    text: 'Outreach vital business connections without barriers.',
+    icon: "/images/outreach-business-connections-ico.png",
+    alt: "outreach-business-connections",
+    text: "Outreach vital business connections without barriers.",
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/endorse-company-ico.png',
-    alt: 'endorse-company',
-    text: 'Endorse your company image.',
+    icon: "/images/endorse-company-ico.png",
+    alt: "endorse-company",
+    text: "Endorse your company image.",
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/strengthen-company-culture-cio.png',
-    alt: 'strengthen-company-culture',
-    text: 'Strengthen company culture.',
+    icon: "/images/strengthen-company-culture-cio.png",
+    alt: "strengthen-company-culture",
+    text: "Strengthen company culture.",
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/cost-efficient-way-ico.png',
-    alt: 'cost-efficient-way',
-    text: 'Advertise in a cost-efficient way.',
+    icon: "/images/cost-efficient-way-ico.png",
+    alt: "cost-efficient-way",
+    text: "Advertise in a cost-efficient way.",
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/build-maintain-strengthen-relationship-ico.png',
-    alt: 'build-maintain-strengthen-relationship',
-    text: 'Build, Maintain, & Strengthen Relationships.',
+    icon: "/images/build-maintain-strengthen-relationship-ico.png",
+    alt: "build-maintain-strengthen-relationship",
+    text: "Build, Maintain, & Strengthen Relationships.",
   },
 ];
 
@@ -84,10 +86,12 @@ export default function BenefitsSection() {
             >
               {/* Icon + first line of text flow inline like original */}
               <div className="text-gray-700 text-base leading-relaxed">
-                <img
+                <Image
                   src={benefit.icon}
                   alt={benefit.alt}
-                  className="inline-block w-14 h-14 object-contain align-top mr-3 float-left"
+                  width={56}
+                  height={56}
+                  className="inline-block object-contain align-top mr-3 float-left"
                 />
                 {benefit.text}
                 {/* clearfix */}

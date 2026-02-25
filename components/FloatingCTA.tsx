@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import ContactPopup from "./ContactPopup";
+import ContactPopup from "./ui/ContactPopup";
 
 interface FloatingCTAProps {
   type?: "connect" | "catalogue";

@@ -2,8 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  images:{
-    domains: ["ridgegap.com"]
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ridgegap.com",
+        pathname: "/**",
+      },
+    ],
   },
   async redirects(){
     return[
@@ -45,6 +51,21 @@ const nextConfig: NextConfig = {
       {
         source: '/christmas-new-year-corporate-gifts',
         destination: '/',
+        permanent: true
+      },
+      {
+        source: '/post-sitemap.xml',
+        destination: '/sitemap.xml',
+        permanent: true
+      },
+      {
+        source: '/page-sitemap.xml',
+        destination: '/sitemap.xml',
+        permanent: true
+      },
+      {
+        source: '/sitemap_index.xml',
+        destination: '/sitemap.xml',
         permanent: true
       },
     ]
