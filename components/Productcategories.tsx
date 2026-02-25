@@ -92,13 +92,11 @@ export default function ProductCategories() {
               className="bg-[#eef2ff] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col"
             >
               {/* Image area — light blue bg */}
-              <div className="bg-[#dbeafe] flex items-center justify-center h-50 overflow-hidden rounded-xl m-3">
-                <Image
+              <div className="bg-[#dbeafe] flex items-center justify-center h-40 overflow-hidden rounded-xl m-3">
+                <img
                   src={cat.image}
                   alt={cat.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 25vw"
+                  className="w-full h-full object-cover"
                 />
               </div>
 

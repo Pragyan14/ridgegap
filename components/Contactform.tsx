@@ -132,7 +132,7 @@ export default function ContactForm() {
 
             {/* Reach Us @ */}
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center">
+              <div className="shrink-0 w-14 h-14 flex items-center justify-center">
                 <MapPin size={40} className="text-gray-900" strokeWidth={1.5} />
               </div>
               <div>
@@ -149,7 +149,7 @@ export default function ContactForm() {
 
             {/* Email Us @ */}
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center">
+              <div className="shrink-0 w-14 h-14 flex items-center justify-center">
                 <Mail size={40} className="text-gray-900" strokeWidth={1.5} />
               </div>
               <div>
@@ -169,7 +169,7 @@ export default function ContactForm() {
 
             {/* Call Us @ */}
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center">
+              <div className="shrink-0 w-14 h-14 flex items-center justify-center">
                 <Phone size={40} className="text-gray-900" strokeWidth={1.5} />
               </div>
               <div>
