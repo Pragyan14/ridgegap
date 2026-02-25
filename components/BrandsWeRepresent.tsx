@@ -1,87 +1,52 @@
 ﻿'use client';
 
 import Image from "next/image";
+import styles from './CompanyLogos.module.css';
 
 export default function BrandsWeRepresent() {
-    const brands = [
-        {
-            name: 'Google',
-            logo: '/images/google-showlogimg.png',
-        },
-        {
-            name: 'Amazon',
-            logo: '/images/amazon-showlogimg.png',
-        },
-        {
-            name: 'Mercedes-Benz',
-            logo: '/images/mercedes-benz-showlogimg.png',
-        },
-        {
-            name: 'JPMorgan',
-            logo: '/images/jpmorgan-showlogimg.png',
-        },
-        {
-            name: 'BigBasket',
-            logo: '/images/bigbasket-showlogimg.png',
-        },
-        {
-            name: 'Unacademy',
-            logo: '/images/unacademy-showlogimg.png',
-        },
-        {
-            name: 'hummel',
-            logo: '/images/hummel-brandshowimg.jpg',
-        },
-        {
-            name: 'American Tourister',
-            logo: '/images/american-tourister-brandshowimg.jpg',
-        },
-        {
-            name: 'Pebble',
-            logo: '/images/pebble-brandshowimg.jpg',
-        },
-        {
-            name: 'JBL',
-            logo: '/images/JBL-brandshowimg.jpg',
-        },
-        {
-            name: 'Targus',
-            logo: '/images/targus-brandshowimg.png',
-        },
-        {
-            name: 'Portronics',
-            logo: '/images/portronics-brandshowimg.jpg',
-        },
-    ];
+    const logos = [
+    "/images/google-showlogimg.png",
+    "/images/amazon-showlogimg.png",
+    "/images/mercedes-benz-showlogimg.png",
+    "/images/jpmorgan-showlogimg.png",
+    "/images/bigbasket-showlogimg.png",
+    "/images/unacademy-showlogimg.png",
+    "/images/embibe-showlogimg.png",
+    "/images/zoomcar-showlogimg.png",
+    "/images/team-indus-showlogimg.png",
+    "/images/pluto7-showlogimg.png",
+    "/images/citrix-showlogimg.png",
+    "/images/century-thinking-ahead-logo.png",
+    "/images/wolves-showlogimg.png",
+    "/images/zenefits-showlogimg.png",
+    "/images/akshaypatra-showlogimg.png",
+    "/images/vidyashilp-academy-showlogimg.png",
+    "/images/xseed-showlogimg.png"
+  ];
 
     return (
-        <section className="py-12 md:py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section Header */}
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        Brands We Represent
-                    </h2>
-                </div>
+        <section className="py-12 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4">
+        <h3 className="text-center text-3xl font-semibold text-gray-900 mb-12">
+          Brands We Represent
+        </h3>
 
-                {/* Brand Logos Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
-                    {brands.map((brand, index) => (
-                        <div
-                            key={index}
-                            className="w-full flex items-center justify-center p-4 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
-                        >
-                            <Image
-                                src={brand.logo}
-                                alt={brand.name}
-                                width={120}
-                                height={48}
-                                className="h-10 md:h-12 w-auto object-contain"
-                            />
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
+        <div className={styles.slider}>
+          <div className={styles.slideTrack}>
+            {[...logos, ...logos].map((logo, index) => (
+              <div key={index} className={styles.slide}>
+                <Image
+                  src={logo}
+                  alt="Company Logo"
+                  width={120}
+                  height={40}
+                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
     );
 }
