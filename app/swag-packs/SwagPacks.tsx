@@ -9,69 +9,46 @@ import ProductHero from "@/components/ProductHero";
 import ProductsFeatures, { FeatureItem } from "@/components/ProductsFeatures";
 import RecentProjects from "@/components/Recentprojects";
 import TestimonialCarousel from "@/components/Testimonials";
-import JoinerSteps, { StepCard } from "@/components/JoinerSteps";
 import FloatingCTA from "@/components/FloatingCTA";
-
-
-const stepsData: StepCard[] = [
-    {
-        iconUrl: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/content-ico.png",
-        altText: "Content Icon",
-        title: "Build your gift box",
-        description: "Choose from over 150 impactful products to create the perfect gift box for your employees or clients."
-    },
-    {
-        iconUrl: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/design-branding-ico.png",
-        altText: "Design & Branding Icon",
-        title: "Add personalisation",
-        description: "Add your logo to the gift box, message card or add an everyday branded product."
-    },
-    {
-        iconUrl: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/order-ico.png",
-        altText: "Order Icon",
-        title: "Ready in 3-10 days",
-        description: "Bulk-ship to one location or ship individually to employee or client addresses."
-    },
-];
 
 const benefits = [
     {
-        icon: 'https://ridgegap.com/wp-content/uploads/2025/04/badge.png',
+        icon: '/images/badge.png',
         alt: 'positive-attitude',
         text: 'Swagpacks creates or reinforces corporate identity.',
     },
     {
-        icon: 'https://ridgegap.com/wp-content/uploads/2025/04/proposition.png',
+        icon: '/images/proposition.png',
         alt: 'impression-rate',
         text: 'Creates a unique gifting experience to excite your customers, sales prospects, or employees.',
     },
     {
-        icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/innovative-gifting-ico.png',
+        icon: '/images/innovative-gifting-ico.png',
         alt: 'customer-retention',
         text: "Leave a Lasting Impression on receivers.",
     },
     {
-        icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/trusted-ico.png',
+        icon: '/images/trusted-ico.png',
         alt: 'network',
         text: 'Builds customer trust.',
     },
     {
-        icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/brand-ico.png',
+        icon: '/images/brand-ico.png',
         alt: 'career',
         text: 'Boosts brand awareness.',
     },
     {
-        icon: 'https://ridgegap.com/wp-content/uploads/2025/04/accessible.png',
+        icon: '/images/accessible.png',
         alt: 'career',
         text: 'It’s cost-effective, creative, & versatile.',
     },
     {
-        icon: 'https://ridgegap.com/wp-content/uploads/2025/04/corporate-culture.png',
+        icon: '/images/corporate-culture.png',
         alt: 'career',
         text: 'Portrays company culture.',
     },
     {
-        icon: 'https://ridgegap.com/wp-content/uploads/2025/04/lead-generation.png',
+        icon: '/images/lead-generation.png',
         alt: 'career',
         text: 'Proves to be an effective marketing tool',
     },
@@ -79,31 +56,31 @@ const benefits = [
 
 const featuresData: FeatureItem[] = [
     {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/distribution-center.png",
+        icon: "/images/distribution-center.png",
         html: "<strong>Vast range of products</strong>",
     },
     {
-        icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/customization-ico.png",
+        icon: "/images/customization-ico.png",
         html: "<strong>Custom designs</strong>",
     },
     {
-        icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/pre-curated-ico.png",
+        icon: "/images/pre-curated-ico.png",
         html: "<strong>Inventory support</strong>",
     },
     {
-        icon: "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/icons/low-turnaround-time-ico.png",
+        icon: "/images/low-turnaround-time-ico.png",
         html: "<strong>Shipping & delivery</strong>",
     },
     {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/brand-customization.png",
+        icon: "/images/brand-customization.png",
         html: "<strong>Branding customization</strong>",
     },
     {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/accessible.png",
+        icon: "/images/accessible.png",
         html: "<strong>Budget Friendly</strong>",
     },
     {
-        icon: "https://ridgegap.com/wp-content/uploads/2025/04/personalization-1.png",
+        icon: "/images/personalization-1.png",
         html: "<strong>Personalization</strong>",
     },
 ];
