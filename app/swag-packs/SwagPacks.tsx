@@ -112,7 +112,7 @@ export default function SwagPacks() {
     return <>
 
         <ProductHero
-            backgroundImage="https://ridgegap.com/wp-content/uploads/2025/05/Curated-Gift-boxes-Banner-page-scaled.jpg"
+            backgroundImage="/images/Curated-Gift-boxes-Banner-page-scaled.jpg"
             heading="Swag packs are a great way to get your story out there in a swift yet meaningful way."
             subheading="Our swag packs are specially designed and curated to your brand, budget & needs.."
             buttonMessage="Request a quote it take 2min!"

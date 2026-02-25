@@ -31,7 +31,7 @@ export default function CorporateDiwaliGifts() {
   return (<>
     <section className="relative w-full h-[80vh]">
       <Image
-        src="https://ridgegap.com/wp-content/uploads/2025/06/corporate-diwali-banner-scaled.jpg"
+        src="/images/corporate-diwali-banner-scaled.jpg"
         alt="Diwali Corporate Gifting Banner"
         fill
         priority

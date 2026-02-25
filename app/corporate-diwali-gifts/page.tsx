@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
     images: [
       {
-        url: "/images/diwali-corporate-gifting-solutions-banner.jpg",
+        url: "/images/corporate-diwali-banner-scaled.jpg",
         width: 1920,
         height: 576,
         alt: "Corporate Diwali Gifts",
