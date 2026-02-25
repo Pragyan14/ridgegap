@@ -1,4 +1,4 @@
-import CuratedGiftBoxes from "./CuratedGiftBoxes";
+﻿import CuratedGiftBoxes from "./CuratedGiftBoxes";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
     images: [
       {
-        url: "https://ridgegap.com/wp-content/uploads/2023/05/curated-gift-boxes-slider-mobile2.jpg",
+        url: "/images/curated-gift-boxes-slider-mobile2.jpg",
         width: 1248,
         height: 641,
         alt: "corporate gift boxes",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description:
       "Delight your recipients with curated gift boxes. Perfect for any occasion, these gifts are sure to leave a lasting impression. Tailormade gifts for your clients, employees, & occasions.",
     images: [
-      "https://ridgegap.com/wp-content/uploads/2023/05/curated-gift-boxes-slider-mobile2.jpg",
+      "/images/curated-gift-boxes-slider-mobile2.jpg",
     ],
   },
 };

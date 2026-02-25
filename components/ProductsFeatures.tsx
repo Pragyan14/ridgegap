@@ -1,4 +1,6 @@
-'use client';
+﻿'use client';
+
+import Image from "next/image";
 
 export interface FeatureItem {
     icon: string;
@@ -25,10 +27,12 @@ export default function ProductsFeatures({
 
                     {/* Optional Top Icon */}
                     <div className="flex justify-center mb-5">
-                        <img
-                            src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/feature-ico.png"
+                        <Image
+                            src="/images/feature-ico.png"
                             alt="Corporate-gifting-feature"
-                            className="w-16 h-16 object-contain"
+                            width={64}
+                            height={64}
+                            className="object-contain"
                         />
                     </div>
 
@@ -51,10 +55,12 @@ export default function ProductsFeatures({
                                 key={`feature-${index}`}
                                 className={`bg-[#eef4ff] rounded-2xl p-5 flex items-start gap-4 hover:shadow-md transition-shadow duration-200`}
                             >
-                                <img
+                                <Image
                                     src={feat.icon}
                                     alt=""
-                                    className="w-14 h-14 object-contain shrink-0 mt-0.5"
+                                    width={56}
+                                    height={56}
+                                    className="object-contain shrink-0 mt-0.5"
                                 />
 
                                 <p

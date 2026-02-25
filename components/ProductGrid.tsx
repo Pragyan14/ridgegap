@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export interface CardItem {
@@ -13,7 +14,7 @@ interface CardGridProps {
 const ProductGrid: React.FC<CardGridProps> = ({ mainHeading, items }) => {
   return (
     <section className="py-8 px-6 sm:px-12 lg:px-24 bg-gray-50">
-      
+
       {/* Main Heading */}
       <h2 className="text-3xl sm:text-4xl font-serif font-bold text-center text-blue-900 mb-12">
         {mainHeading}
@@ -28,10 +29,12 @@ const ProductGrid: React.FC<CardGridProps> = ({ mainHeading, items }) => {
           >
             {/* Image */}
             <div className="rounded-xl overflow-hidden bg-gray-100 mb-6">
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
-                className="w-full h-42 object-cover group-hover:scale-105 transition duration-300"
+                fill
+                className="object-cover group-hover:scale-105 transition duration-300"
+                sizes="(max-width: 768px) 100vw, 25vw"
               />
             </div>
 

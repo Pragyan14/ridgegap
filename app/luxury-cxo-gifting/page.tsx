@@ -1,4 +1,4 @@
-import LuxuryCXOGifting from "./LuxuryCXOGifting";
+﻿import LuxuryCXOGifting from "./LuxuryCXOGifting";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
     images: [
       {
-        url: "https://ridgegap.com/wp-content/uploads/2023/05/luxury-gifting-slider-mobile1.jpg",
+        url: "/images/luxury-gifting-slider-mobile1.jpg",
         width: 1248,
         height: 641,
         alt: "CXO Gifting",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description:
       "Impress your clients and enhance business relationships with our exquisite luxury corporate gifts. Gifts that will wow your clients, Discover now.",
     images: [
-      "https://ridgegap.com/wp-content/uploads/2023/05/luxury-gifting-slider-mobile1.jpg",
+      "/images/luxury-gifting-slider-mobile1.jpg",
     ],
   },
 };

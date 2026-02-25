@@ -1,71 +1,73 @@
-'use client';
+﻿'use client';
+
+import Image from "next/image";
 
 export default function ProductCategories() {
   const categories = [
     {
       title: 'Apparels',
       description: '30+ brand to choose from the finest quality for corporate gifting.',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/apparels-category-showcase.jpg',
+      image: '/images/apparels-category-showcase.jpg',
       href: '/apparels',
     },
     {
       title: 'Backpacks',
       description: 'Stay comfortable and fashionable with our durable & Comfy backpacks.',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/backpacks-category-showcase.jpg',
+      image: '/images/backpacks-category-showcase.jpg',
       href: '/backpacks',
     },
     {
       title: 'Technology Gadgets',
       description: "Once you get your hands on these tech gifts, you won't want to let them go.",
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/technical-gadgets-category-showcase.jpg.jpeg',
+      image: '/images/technical-gadgets-category-showcase.jpg.jpeg',
       href: '/tech-gadgets',
     },
     {
       title: 'Drinkware',
       description: 'Browse our wide selection of premium drinkware, including mugs, bottles, flasks…',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/drinkware-category-showcase.jpg',
+      image: '/images/drinkware-category-showcase.jpg',
       href: '/drinkwares',
     },
     {
       title: 'Trophies & Awards',
       description: 'Best for Sports, Fitness & Outdoors from a great selection of Trophies, Medals.',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/trophies-awards-thumbnail-show.jpg',
+      image: '/images/trophies-awards-thumbnail-show.jpg',
       href: '/trophies-awards',
     },
     {
       title: 'Work from Home',
       description: 'One of the best gifts to give someone working with a lot of distractions at home.',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/work-from-home-thumbnail-show.jpg',
+      image: '/images/work-from-home-thumbnail-show.jpg',
       href: '/work-from-home',
     },
     {
       title: 'Office & Stationary',
       description: 'What better a gift than office utility products for executives working in…',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/office-stationeries-thumbnail-show.jpg',
+      image: '/images/office-stationeries-thumbnail-show.jpg',
       href: '/office-stationeries',
     },
     {
       title: 'Travel Accessories',
       description: 'All that you need to make your travel comfortable and easy.',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/travel-accessories-category-showcase.jpg',
+      image: '/images/travel-accessories-category-showcase.jpg',
       href: '/travel-accessories',
     },
     {
       title: 'Tech Accessories',
       description: 'Cool Tech Gifts That Will Make Life Easier & More Fun.',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/technology-accessories-thumbnail-show.jpg',
+      image: '/images/technology-accessories-thumbnail-show.jpg',
       href: '/tech-accessories',
     },
     {
       title: 'Desk Accessories',
       description: 'Gifts that will make your work more organised on your…',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/desk-accessories-category-showcase.jpg',
+      image: '/images/desk-accessories-category-showcase.jpg',
       href: '/desk-accessories',
     },
     {
       title: 'Health & Fitness',
       description: 'Fitness Gifts That Will Impress Your Most Active Friends.',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/health-fitness-thumbnail-show.jpg',
+      image: '/images/health-fitness-thumbnail-show.jpg',
       href: '/health-fitness-gifts',
     },
   ];
@@ -91,10 +93,12 @@ export default function ProductCategories() {
             >
               {/* Image area — light blue bg */}
               <div className="bg-[#dbeafe] flex items-center justify-center h-50 overflow-hidden rounded-xl m-3">
-                <img
+                <Image
                   src={cat.image}
                   alt={cat.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </div>
 

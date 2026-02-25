@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import FloatingCTA from "@/components/FloatingCTA";
 import WhyChooseUs from "@/components/Whychooseus";
@@ -44,7 +44,7 @@ export default function AboutPage() {
                         {/* Right — product image */}
                         <div className="flex justify-center lg:justify-end">
                             <img
-                                src="https://ridgegap.com/wp-content/uploads/2025/04/about-2.png"
+                                src="/images/about-2.png"
                                 alt="Corporate gifting products"
                                 className="w-full max-w-70 h-auto object-contain drop-shadow-lg"
                             />
@@ -57,7 +57,7 @@ export default function AboutPage() {
                         {/* Vision card */}
                         <div className="bg-white rounded-2xl p-8 border border-blue-50 shadow-sm hover:shadow-md transition-shadow duration-200">
                             <img
-                                src="https://ridgegap.com/wp-content/uploads/2025/04/vision.png"
+                                src="/images/vision.png"
                                 alt="Vision"
                                 className="w-14 h-14 object-contain mb-5"
                             />
@@ -72,7 +72,7 @@ export default function AboutPage() {
                         {/* Mission card */}
                         <div className="bg-white rounded-2xl p-8 border border-blue-50 shadow-sm hover:shadow-md transition-shadow duration-200">
                             <img
-                                src="https://ridgegap.com/wp-content/uploads/2025/04/mission.png"
+                                src="/images/mission.png"
                                 alt="Mission"
                                 className="w-14 h-14 object-contain mb-5"
                             />

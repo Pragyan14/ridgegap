@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { decode } from "html-entities";
+import Image from "next/image";
 
 export default function BlogCard({ blog }: { blog: any }) {
   const formattedDate = blog.published_at
@@ -10,9 +11,11 @@ export default function BlogCard({ blog }: { blog: any }) {
     <article className="h-full border border-gray-300 p-4 shadow-sm bg-white">
       <div className="mb-3 ">
         <Link href={`/blog/${blog.slug}`}>
-          <img
+          <Image
             src={blog.featured_image || "/images/default.jpg"}
             alt={blog.title}
+            width={800}
+            height={600}
             className="w-full h-86 object-cover rounded-4xl"
           />
         </Link>

@@ -1,67 +1,69 @@
-'use client';
+﻿'use client';
+
+import Image from "next/image";
 
 export default function CorporateGiftingSolutions() {
   const solutions = [
     {
       title: 'New Joiner Kits',
       href: '/new-joiner-kits',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/new-joiner-kit-product-showinfoimg.png',
+      image: '/images/new-joiner-kit-product-showinfoimg.png',
       bgColor: 'bg-[#2d2d2d]', // Dark gray/black
       textColor: 'text-white',
     },
     {
       title: 'Customised T-shirts',
       href: '/customised-tshirts',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/customised-tshirts-showinfoimg.png',
+      image: '/images/customised-tshirts-showinfoimg.png',
       bgColor: 'bg-[#f4b631]', // Yellow/Gold
       textColor: 'text-white',
     },
     {
       title: 'Corporate Laptop Bags & Backpacks',
       href: '/corporate-laptop-bags-custom-backpacks',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/corporate-customised-bags-showinfoimg.png',
+      image: '/images/corporate-customised-bags-showinfoimg.png',
       bgColor: 'bg-[#ff4757]', // Red/Pink
       textColor: 'text-white',
     },
     {
       title: 'Swag Packs',
       href: '/swag-packs',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/swagpacks-showinfoimg.png',
+      image: '/images/swagpacks-showinfoimg.png',
       bgColor: 'bg-[#e8e8e8]', // Light gray
       textColor: 'text-gray-900',
     },
     {
       title: 'Curated Gift Boxes',
       href: '/curated-gift-boxes',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/curated-giftbox-showinfoimg.png',
+      image: '/images/curated-giftbox-showinfoimg.png',
       bgColor: 'bg-[#2ecc71]', // Green
       textColor: 'text-white',
     },
     {
       title: 'Luxury CXO Gifting',
       href: '/luxury-cxo-gifting',
-      image: 'https://ridgegap.com/wp-content/uploads/2025/04/luxury-gift-showing-1.png',
+      image: '/images/luxury-gift-showing-1.png',
       bgColor: 'bg-[#3498db]', // Blue
       textColor: 'text-white',
     },
     {
       title: 'Custom Projects',
       href: '/special-custom-made-projects',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/custom-made-projects-showinfoimg.png',
+      image: '/images/custom-made-projects-showinfoimg.png',
       bgColor: 'bg-[#ff4757]', // Red/Pink
       textColor: 'text-white',
     },
     {
       title: 'Event/Conference Giveaways',
       href: '/events-conference-promotional-gifts',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/event-conference-promotional-gifts-showinfoimg.png',
+      image: '/images/event-conference-promotional-gifts-showinfoimg.png',
       bgColor: 'bg-[#f4b631]', // Yellow/Gold
       textColor: 'text-white',
     },
     {
       title: 'Sustainable/Eco-friendly Gifts',
       href: '/sustainable-eco-friendly-gifting',
-      image: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/sustainable-product-showinfoimg (1).png',
+      image: '/images/sustainable-product-showinfoimg (1).png',
       bgColor: 'bg-[#2d2d2d]', // Dark gray/black
       textColor: 'text-white',
     },
@@ -75,7 +77,7 @@ export default function CorporateGiftingSolutions() {
         className="absolute inset-0 bg-repeat bg-center pointer-events-none"
         style={{
           backgroundImage:
-            "url('https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/bgn-pattern.png')",
+            "url('/images/bgn-pattern.png')",
           opacity: 100,
         }}
       />
@@ -117,10 +119,12 @@ export default function CorporateGiftingSolutions() {
 
                 {/* Right Image */}
                 <div className="shrink-0 w-24 h-24 md:w-32 md:h-32 relative">
-                  <img
+                  <Image
                     src={solution.image}
                     alt={solution.title}
-                    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                    fill
+                    className="object-contain transition-transform duration-300 group-hover:scale-110"
+                    sizes="(max-width: 768px) 96px, 128px"
                   />
                 </div>
               </div>

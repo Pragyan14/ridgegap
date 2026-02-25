@@ -1,41 +1,41 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 const cards = [
   {
     title: "Diwali Corporate Gifts for Employees",
     description:
       "Celebrate Diwali with your employees by giving them the perfect corporate gifts. From personalized items to festive hampers, find the ideal gift for each employee and make this Diwali truly memorable.",
-    image: "https://ridgegap.com/wp-content/uploads/2025/06/employees.png",
+    image: "/images/employees.png",
   },
   {
     title: "Corporate Diwali Gifts for Clients",
     description:
       "Impress your clients this Diwali with unique corporate gifts. From sophisticated gift sets to premium hampers, reflect the festive spirit and strengthen business relationships.",
-    image: "https://ridgegap.com/wp-content/uploads/2025/06/clients.png",
+    image: "/images/clients.png",
   },
   {
     title: "Diwali Gifts for Customers",
     description:
       "Express gratitude to your loyal customers with thoughtful gifts. From beautifully crafted presents to festive gift boxes, make this Diwali special for them.",
-    image: "https://ridgegap.com/wp-content/uploads/2025/06/customers.png",
+    image: "/images/customers.png",
   },
   {
     title: "Diwali Gift Ideas for Corporates",
     description:
       "Impress corporate partners with curated gift ideas. From elegant desk accessories to gourmet gift sets, reflect the festive spirit in style.",
-    image: "https://ridgegap.com/wp-content/uploads/2025/06/corporates.png",
+    image: "/images/corporates.png",
   },
   {
     title: "Diwali Gift for Employees under ₹1000",
     description:
       "Celebrate Diwali on a budget with thoughtful gifts under ₹1000. Make employees feel valued without compromising on quality.",
-    image: "https://ridgegap.com/wp-content/uploads/2025/06/under-1000.png",
+    image: "/images/under-1000.png",
   },
   {
     title: "Diwali Gift for Employees under ₹2000",
     description:
       "Explore impressive gift options under ₹2000. Choose stylish accessories and wellness sets to show gratitude.",
-    image: "https://ridgegap.com/wp-content/uploads/2025/06/under-2000.png",
+    image: "/images/under-2000.png",
   },
 ];
 

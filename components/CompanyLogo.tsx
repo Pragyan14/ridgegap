@@ -1,26 +1,27 @@
-'use client';
+﻿'use client';
 
+import Image from 'next/image';
 import styles from './CompanyLogos.module.css';
 
 export default function CompanyLogos() {
   const logos = [
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/google-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/amazon-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/mercedes-benz-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/jpmorgan-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/bigbasket-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/unacademy-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/embibe-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/zoomcar-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/team-indus-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/pluto7-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/citrix-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/century-thinking-ahead-logo.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/wolves-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/zenefits-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/akshaypatra-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/vidyashilp-academy-showlogimg.png",
-    "https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/xseed-showlogimg.png"
+    "/images/google-showlogimg.png",
+    "/images/amazon-showlogimg.png",
+    "/images/mercedes-benz-showlogimg.png",
+    "/images/jpmorgan-showlogimg.png",
+    "/images/bigbasket-showlogimg.png",
+    "/images/unacademy-showlogimg.png",
+    "/images/embibe-showlogimg.png",
+    "/images/zoomcar-showlogimg.png",
+    "/images/team-indus-showlogimg.png",
+    "/images/pluto7-showlogimg.png",
+    "/images/citrix-showlogimg.png",
+    "/images/century-thinking-ahead-logo.png",
+    "/images/wolves-showlogimg.png",
+    "/images/zenefits-showlogimg.png",
+    "/images/akshaypatra-showlogimg.png",
+    "/images/vidyashilp-academy-showlogimg.png",
+    "/images/xseed-showlogimg.png"
   ];
 
   return (
@@ -34,9 +35,11 @@ export default function CompanyLogos() {
           <div className={styles.slideTrack}>
             {[...logos, ...logos].map((logo, index) => (
               <div key={index} className={styles.slide}>
-                <img
+                <Image
                   src={logo}
                   alt="Company Logo"
+                  width={120}
+                  height={40}
                   className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
                 />
               </div>

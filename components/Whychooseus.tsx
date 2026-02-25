@@ -1,52 +1,54 @@
-'use client';
+﻿'use client';
+
+import Image from "next/image";
 
 const features = [
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/10years-ico.png',
+    icon: '/images/10years-ico.png',
     html: '<strong>10 years</strong> of corporate gifting solutions.',
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/trusted-ico.png',
+    icon: '/images/trusted-ico.png',
     html: 'Trusted by <strong>300+</strong> corporate clients.',
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/innovative-gifting-ico.png',
+    icon: '/images/innovative-gifting-ico.png',
     html: '<strong>5000+</strong> innovative gifting products.',
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/packages-delivered-ico.png',
+    icon: '/images/packages-delivered-ico.png',
     html: '<strong>20000+</strong> packages delivered safely.',
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/projects-completed-ico.png',
+    icon: '/images/projects-completed-ico.png',
     html: '<strong>200+</strong> Projects completed.',
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/brand-ico.png',
+    icon: '/images/brand-ico.png',
     html: '<strong>300+</strong> brands to choose from.',
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/category-ico.png',
+    icon: '/images/category-ico.png',
     html: 'Live catalog for <strong>20+</strong> categories.',
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/gifts-door-delivery-ico.png',
+    icon: '/images/gifts-door-delivery-ico.png',
     html: 'Gifts Door Delivered pan India.',
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/efficient-sourcing-ico.png',
+    icon: '/images/efficient-sourcing-ico.png',
     html: 'Bespoke personalization and efficient sourcing.',
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/quality-budget-ico.png',
+    icon: '/images/quality-budget-ico.png',
     html: 'Premium quality and affordable for all types of budget.',
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/lowest-turnaround-time-ico.png',
+    icon: '/images/lowest-turnaround-time-ico.png',
     html: 'Lowest turnaround time promise.',
   },
   {
-    icon: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/customization-expertization-ico.png',
+    icon: '/images/customization-expertization-ico.png',
     html: 'In-house team of corporate Gifting &amp; customization experts.',
   },
 ];
@@ -61,14 +63,12 @@ export default function WhyChooseUs() {
 
           {/* Top icon — gear/service */}
           <div className="flex justify-center mb-5">
-            <img
-              src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/feature-ico.png"
+            <Image
+              src="/images/feature-ico.png"
               alt="Corporate gifting feature"
-              className="w-16 h-16 object-contain"
-              onError={(e) => {
-                // Fallback SVG gear icon if image fails
-                (e.target as HTMLImageElement).style.display = 'none';
-              }}
+              width={64}
+              height={64}
+              className="object-contain"
             />
           </div>
 
@@ -91,10 +91,12 @@ export default function WhyChooseUs() {
               className="bg-[#eef4ff] rounded-2xl p-5 flex items-start gap-4 hover:shadow-md transition-shadow duration-200 min-h-27.5"
             >
               {/* Icon */}
-              <img
+              <Image
                 src={feat.icon}
                 alt=""
-                className="w-14 h-14 object-contain shrink-0 mt-0.5"
+                width={56}
+                height={56}
+                className="object-contain shrink-0 mt-0.5"
               />
 
               {/* Text — bold numbers/keywords via dangerouslySetInnerHTML */}

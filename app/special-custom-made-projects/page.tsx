@@ -1,4 +1,4 @@
-import SpecialCustomMadeProjects from "./SpecialCustomMadeProjects";
+﻿import SpecialCustomMadeProjects from "./SpecialCustomMadeProjects";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
     images: [
       {
-        url: "https://ridgegap.com/wp-content/uploads/2023/05/custom-made-projects-slider-mobile2.jpg",
+        url: "/images/custom-made-projects-slider-mobile2.jpg",
         width: 1248,
         height: 641,
         alt: "custom made gifts",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description:
       "Celebrate special occasions with custom made gifts. Personalize your presents and make every moment unforgettable with RidgeGap's unique gift options.",
     images: [
-      "https://ridgegap.com/wp-content/uploads/2023/05/custom-made-projects-slider-mobile2.jpg",
+      "/images/custom-made-projects-slider-mobile2.jpg",
     ],
   },
 };

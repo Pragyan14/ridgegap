@@ -1,54 +1,56 @@
-'use client';
+﻿'use client';
+
+import Image from "next/image";
 
 export default function BrandsWeRepresent() {
     const brands = [
         {
             name: 'Google',
-            logo: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/google-showlogimg.png',
+            logo: '/images/google-showlogimg.png',
         },
         {
             name: 'Amazon',
-            logo: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/amazon-showlogimg.png',
+            logo: '/images/amazon-showlogimg.png',
         },
         {
             name: 'Mercedes-Benz',
-            logo: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/mercedes-benz-showlogimg.png',
+            logo: '/images/mercedes-benz-showlogimg.png',
         },
         {
             name: 'JPMorgan',
-            logo: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/jpmorgan-showlogimg.png',
+            logo: '/images/jpmorgan-showlogimg.png',
         },
         {
             name: 'BigBasket',
-            logo: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/bigbasket-showlogimg.png',
+            logo: '/images/bigbasket-showlogimg.png',
         },
         {
             name: 'Unacademy',
-            logo: 'https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/unacademy-showlogimg.png',
+            logo: '/images/unacademy-showlogimg.png',
         },
         {
             name: 'hummel',
-            logo: 'https://ridgegap.com/wp-content/uploads/2025/04/hummel-brandshowimg.jpg',
+            logo: '/images/hummel-brandshowimg.jpg',
         },
         {
             name: 'American Tourister',
-            logo: 'https://ridgegap.com/wp-content/uploads/2025/04/american-tourister-brandshowimg.jpg',
+            logo: '/images/american-tourister-brandshowimg.jpg',
         },
         {
             name: 'Pebble',
-            logo: 'https://ridgegap.com/wp-content/uploads/2025/04/pebble-brandshowimg.jpg',
+            logo: '/images/pebble-brandshowimg.jpg',
         },
         {
             name: 'JBL',
-            logo: 'https://ridgegap.com/wp-content/uploads/2025/04/JBL-brandshowimg.jpg',
+            logo: '/images/JBL-brandshowimg.jpg',
         },
         {
             name: 'Targus',
-            logo: 'https://ridgegap.com/wp-content/uploads/2025/04/targus-brandshowimg.png',
+            logo: '/images/targus-brandshowimg.png',
         },
         {
             name: 'Portronics',
-            logo: 'https://ridgegap.com/wp-content/uploads/2025/04/portronics-brandshowimg.jpg',
+            logo: '/images/portronics-brandshowimg.jpg',
         },
     ];
 
@@ -69,9 +71,11 @@ export default function BrandsWeRepresent() {
                             key={index}
                             className="w-full flex items-center justify-center p-4 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
                         >
-                            <img
+                            <Image
                                 src={brand.logo}
                                 alt={brand.name}
+                                width={120}
+                                height={48}
                                 className="h-10 md:h-12 w-auto object-contain"
                             />
                         </div>

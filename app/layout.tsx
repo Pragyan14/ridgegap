@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Navbar";
@@ -80,7 +80,7 @@ const schemaData = {
       "@id": "https://ridgegap.com/#organization",
       name: "RIDGEGAP SOLUTIONS PVT. LTD",
       url: "https://ridgegap.com",
-      logo: "https://ridgegap.com/wp-content/uploads/2025/05/ridge-gap-logo.png",
+      logo: "/images/ridge-gap-logo.png",
       sameAs: [
         "https://www.facebook.com/ridgegap",
         "https://instagram.com/ridgegap_corporate_gifting"

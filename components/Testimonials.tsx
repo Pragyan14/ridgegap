@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState, useCallback, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
@@ -72,7 +72,7 @@ export default function TestimonialCarousel() {
       className="relative w-full overflow-hidden bg-repeat bg-center"
       style={{
         backgroundImage:
-          'url("https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/bg-test.png")',
+          'url("/images/bg-test.png")',
       }}
     >
       {/* Soft overlay for readability */}

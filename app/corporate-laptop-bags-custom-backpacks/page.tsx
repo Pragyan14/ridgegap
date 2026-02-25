@@ -1,4 +1,4 @@
-import CorporateLaptopBags from "./CorporateLaptopBags";
+﻿import CorporateLaptopBags from "./CorporateLaptopBags";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
     images: [
       {
-        url: "https://ridgegap.com/wp-content/uploads/2023/05/corporate-laptop-bags-slider-mobile1.jpg",
+        url: "/images/corporate-laptop-bags-slider-mobile1.jpg",
         width: 1248,
         height: 641,
         alt: "laptop bags",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description:
       "Stand out in the corporate world with our custom backpacks and laptop bags. Tailor-made for your brand and designed for style & practicality.",
     images: [
-      "https://ridgegap.com/wp-content/uploads/2023/05/corporate-laptop-bags-slider-mobile1.jpg",
+      "/images/corporate-laptop-bags-slider-mobile1.jpg",
     ],
   },
 };

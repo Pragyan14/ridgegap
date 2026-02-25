@@ -1,4 +1,4 @@
-import BrandsWeRepresent from "@/components/BrandsWeRepresent";
+﻿import BrandsWeRepresent from "@/components/BrandsWeRepresent";
 import ContactForm from "@/components/Contactform";
 import FloatingCTA from "@/components/FloatingCTA";
 import ProductGrid, { CardItem } from "@/components/ProductGrid";
@@ -45,7 +45,7 @@ export default async function ProductCategoryPage({ params }: Props) {
         className="relative min-h-120 flex items-center px-6 sm:px-12 lg:px-24 overflow-hidden"
         style={{
           backgroundImage:
-            "url('https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/slider-pattern-bg.png')",
+            "url('/images/slider-pattern-bg.png')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "right center",
           backgroundSize: "cover",

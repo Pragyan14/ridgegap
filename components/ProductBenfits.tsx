@@ -1,5 +1,7 @@
 'use client';
 
+import Image from "next/image";
+
 export interface BenefitItem {
   icon: string;
   alt: string;
@@ -21,7 +23,7 @@ export default function ProductBenefit({
 }: ProductBenefitProps) {
   return (
     <section className="relative py-14 md:py-20 bg-white overflow-hidden">
-      
+
       {/* Watermark */}
       <div className="absolute top-4 right-24 select-none pointer-events-none">
         <span
@@ -55,10 +57,12 @@ export default function ProductBenefit({
               className="bg-[#eef3fb] rounded-2xl p-6 md:p-7 flex flex-col gap-3"
             >
               <div className="text-gray-700 text-base leading-relaxed">
-                <img
+                <Image
                   src={benefit.icon}
                   alt={benefit.alt}
-                  className="inline-block w-14 h-14 object-contain align-top mr-3 float-left"
+                  width={56}
+                  height={56}
+                  className="inline-block object-contain align-top mr-3 float-left"
                 />
                 {benefit.text}
                 <div className="clear-both" />

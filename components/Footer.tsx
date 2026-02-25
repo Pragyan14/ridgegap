@@ -1,28 +1,29 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { MapPin, Mail, Phone, Instagram, Facebook, ArrowRight } from 'lucide-react';
 import ContactPopup from './ui/ContactPopup';
+import Image from 'next/image';
 
 const instagramPosts = [
   {
     href: 'https://www.instagram.com/p/DUmzG-TCE2J/',
-    image: 'https://ridgegap.com/wp-content/uploads/sb-instagram-feed-images/626294830_18325883491247469_8682863323477652355_n.heiclow.webp',
+    image: '/images/626294830_18325883491247469_8682863323477652355_n.heiclow.webp',
     label: 'Custom Gifting',
   },
   {
     href: 'https://www.instagram.com/p/DUkJO-bCK13/',
-    image: 'https://ridgegap.com/wp-content/uploads/sb-instagram-feed-images/626192399_18325755319247469_2662140720257876914_n.heiclow.webp',
+    image: '/images/626192399_18325755319247469_2662140720257876914_n.heiclow.webp',
     label: 'New Joiner Kits',
   },
   {
     href: 'https://www.instagram.com/p/DUh2vmuCB7T/',
-    image: 'https://ridgegap.com/wp-content/uploads/sb-instagram-feed-images/626158350_18325883239247469_7444659688957498760_n.heiclow.webp',
+    image: '/images/626158350_18325883239247469_7444659688957498760_n.heiclow.webp',
     label: 'Employee Swags',
   },
   {
     href: 'https://www.instagram.com/p/DUhk8RBiFWT/',
-    image: 'https://ridgegap.com/wp-content/uploads/sb-instagram-feed-images/629576501_18325885618247469_5607236318958830264_n.heiclow.webp',
+    image: '/images/629576501_18325885618247469_5607236318958830264_n.heiclow.webp',
     label: 'Eco Friendly',
   },
 ];
@@ -47,7 +48,7 @@ export default function Footer() {
       <footer
         className="pt-14 pb-0"
         style={{
-          backgroundImage: "url(https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/footer-bg-3.png)"
+          backgroundImage: "url(/images/footer-bg-3.png)"
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,9 +57,11 @@ export default function Footer() {
             {/* Column 1 — Logo + About + Need Help */}
             <div>
               <div className="mb-5">
-                <img
-                  src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/logo.png"
+                <Image
+                  src="/images/logo.png"
                   alt="Ridgegap"
+                  width={160}
+                  height={64}
                   className="h-16 w-auto"
                 />
               </div>
@@ -69,9 +72,11 @@ export default function Footer() {
               {/* Need Help */}
               <div className="flex items-center gap-4">
                 <div className="shrink-0">
-                  <img
-                    src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/phone-ico.png"
+                  <Image
+                    src="/images/phone-ico.png"
                     alt="phone"
+                    width={48}
+                    height={48}
                     className="w-12 h-12 object-contain"
                   />
                 </div>

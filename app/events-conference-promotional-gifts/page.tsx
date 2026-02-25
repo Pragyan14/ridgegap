@@ -1,4 +1,4 @@
-import EventsConferencePromotionalGifts from "./EventsConferencePromotionalGifts";
+﻿import EventsConferencePromotionalGifts from "./EventsConferencePromotionalGifts";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
     images: [
       {
-        url: "https://ridgegap.com/wp-content/uploads/2023/05/events-conference-gifts-slider-mobile2-1.jpg",
+        url: "/images/events-conference-gifts-slider-mobile2-1.jpg",
         width: 1248,
         height: 641,
         alt: "promotional gifts",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description:
       "Leave a lasting impression with our event and conference promotional gifts. Enhance brand visibility and engage your attendees. Explore RidgeGap's selection",
     images: [
-      "https://ridgegap.com/wp-content/uploads/2023/05/events-conference-gifts-slider-mobile2-1.jpg",
+      "/images/events-conference-gifts-slider-mobile2-1.jpg",
     ],
   },
 };

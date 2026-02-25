@@ -1,4 +1,4 @@
-import CustomisedTshirts from "./CustomisedTshirts";
+﻿import CustomisedTshirts from "./CustomisedTshirts";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
     images: [
       {
-        url: "https://ridgegap.com/wp-content/uploads/2023/05/customised-tshirts-slider-mobile1.jpg",
+        url: "/images/customised-tshirts-slider-mobile1.jpg",
         width: 1248,
         height: 641,
         alt: "Customized T-Shirts",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description:
       "Unify your team and showcase your brand with our customized apparel. From tshirts to branded clothing, discover RidgeGap's apparel customization.",
     images: [
-      "https://ridgegap.com/wp-content/uploads/2023/05/customised-tshirts-slider-mobile1.jpg",
+      "/images/customised-tshirts-slider-mobile1.jpg",
     ],
   },
 };

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import BrandsWeRepresent from "@/components/BrandsWeRepresent";
 import CTAForm from "@/components/Ctaform";
@@ -100,7 +100,7 @@ export default function CorporateDiwaliGifts() {
           <div className="flex justify-center transition-all duration-300 lg:justify-start hover:-translate-y-3">
             <div className="md:p-6 w-full max-w-200">
               <img
-                src="https://ridgegap.com/wp-content/uploads/2025/07/celebrate-diwali-img.jpeg"
+                src="/images/celebrate-diwali-img.jpeg"
                 alt="Corporate Gifting Showcase"
                 className="w-full h-auto object-contain"
               />

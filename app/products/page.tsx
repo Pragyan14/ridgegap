@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import ContactForm from "@/components/Contactform";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -15,7 +15,7 @@ export default function ProductsPage() {
       className="relative bg-blue-500 py-16 px-6 sm:px-12 lg:px-24 overflow-hidden"
       style={{
         backgroundImage:
-          "url('https://ridgegap.com/wp-content/uploads/2025/05/Products-Banner-page-scaled.jpg')",
+          "url('/images/Products-Banner-page-scaled.jpg')",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "right center",
         backgroundSize: "cover",

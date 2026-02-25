@@ -1,4 +1,6 @@
-'use client';
+﻿'use client';
+
+import Image from "next/image";
 
 export default function WhatWeDoBest() {
   return (
@@ -9,9 +11,11 @@ export default function WhatWeDoBest() {
           {/* ── LEFT — Illustration ── */}
           <div className="flex justify-center lg:justify-start">
             <div className="bg-[#dde8e4] rounded-3xl md:p-6 w-full max-w-125">
-              <img
-                src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/images/cg-gifting-showcase-1.png"
+              <Image
+                src="/images/cg-gifting-showcase-1.png"
                 alt="Corporate Gifting Showcase"
+                width={800}
+                height={600}
                 className="w-full h-auto object-contain"
               />
             </div>

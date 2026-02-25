@@ -1,8 +1,9 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
 import CTABtn from './ui/CTABtn';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,9 +48,11 @@ export default function Navbar() {
             {/* Logo */}
             <div className="shrink-0">
               <a href="/" className="flex items-center">
-                <img
-                  src="https://ridgegap.com/wp-content/themes/ridgegap-wptheme/img/logo.png"
+                <Image
+                  src="/images/logo.png"
                   alt="Ridgegap"
+                  width={180}
+                  height={72}
                   className="h-18 w-auto"
                 />
               </a>
@@ -106,7 +109,7 @@ export default function Navbar() {
               </a>
 
               {/* CTA Button */}
-              <CTABtn message={"Book a Call"}/>
+              <CTABtn message={"Book a Call"} />
             </div>
 
             {/* Mobile Menu Button */}
@@ -168,7 +171,7 @@ export default function Navbar() {
                 <a href="/corporate-diwali-gifts" className="text-gray-900 hover:text-blue-600 font-medium transition-colors">
                   Diwali Gifts
                 </a>
-                <CTABtn message={"Book a Call"}/>
+                <CTABtn message={"Book a Call"} />
               </div>
             </div>
           )}

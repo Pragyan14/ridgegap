@@ -1,4 +1,4 @@
-import SwagPacks from "./SwagPacks";
+﻿import SwagPacks from "./SwagPacks";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "RIDGEGAP SOLUTIONS PVT. LTD",
     images: [
       {
-        url: "https://ridgegap.com/wp-content/uploads/2023/05/swag-packs-slider-mobile2.jpg",
+        url: "/images/swag-packs-slider-mobile2.jpg",
         width: 1248,
         height: 641,
         alt: "swag box",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description:
       "Discover our wide range of high-quality company swags. From promotional items to branded merchandise, RidgeGap has the perfect swag for your corporate needs.",
     images: [
-      "https://ridgegap.com/wp-content/uploads/2023/05/swag-packs-slider-mobile2.jpg",
+      "/images/swag-packs-slider-mobile2.jpg",
     ],
   },
 };

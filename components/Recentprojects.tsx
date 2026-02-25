@@ -1,44 +1,46 @@
-'use client';
+﻿'use client';
+
+import Image from "next/image";
 
 export default function RecentProjects() {
   const projects = [
     {
-      image: 'https://ridgegap.com/wp-content/uploads/2025/04/recent-project-3.png',
+      image: '/images/recent-project-3.png',
       title: 'Curated Gift Boxes',
       bgColor: 'bg-sky-400',
     },
     {
-      image: 'https://ridgegap.com/wp-content/uploads/2025/04/curated-box-4.png',
+      image: '/images/curated-box-4.png',
       title: 'Festive Gifting',
       bgColor: 'bg-sky-400',
     },
     {
-      image: 'https://ridgegap.com/wp-content/uploads/2025/04/custom-tshirt.png',
+      image: '/images/custom-tshirt.png',
       title: 'Festive Gifting',
       bgColor: 'bg-sky-400',
     },
     {
-      image: 'https://ridgegap.com/wp-content/uploads/2025/05/backpack.png',
+      image: '/images/backpack.png',
       title: 'Curated Gift Boxes',
       bgColor: 'bg-gray-200',
     },
     {
-      image: 'https://ridgegap.com/wp-content/uploads/2025/04/swag-pack.png',
+      image: '/images/swag-pack.png',
       title: 'Curated Gift Boxes',
       bgColor: 'bg-sky-400',
     },
     {
-      image: 'https://ridgegap.com/wp-content/uploads/2025/04/event-and-conference.png',
+      image: '/images/event-and-conference.png',
       title: 'Festive Gifting',
       bgColor: 'bg-gray-200',
     },
     {
-      image: 'https://ridgegap.com/wp-content/uploads/2025/04/luxury-gift-2.png',
+      image: '/images/luxury-gift-2.png',
       title: 'Festive Gifting',
       bgColor: 'bg-sky-400',
     },
     {
-      image: 'https://ridgegap.com/wp-content/uploads/2025/04/special-custom-made-projects.png',
+      image: '/images/special-custom-made-projects.png',
       title: 'Curated Gift Boxes',
       bgColor: 'bg-sky-400',
     },
@@ -71,10 +73,12 @@ export default function RecentProjects() {
               className={`rounded-2xl overflow-hidden hover:transition-shadow duration-300`}
             >
               <div className="pb-0">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 shadow-lg object-contain mb-4"
+                  width={800}
+                  height={192}
+                  className="shadow-lg object-contain mb-4"
                 />
               </div>
               <div className="px-6 pb-6">
