@@ -11,6 +11,7 @@ import RecentProjects from "@/components/Recentprojects";
 import TestimonialCarousel from "@/components/Testimonials";
 import JoinerSteps, { StepCard } from "@/components/JoinerSteps";
 import FloatingCTA from "@/components/FloatingCTA";
+import ContactForm from "@/components/Contactform";
 
 
 const stepsData: StepCard[] = [
@@ -132,6 +133,8 @@ export default function CuratedGiftBoxes() {
         <CorporateGiftingSolutions />
 
         <BrandsWeRepresent />
+
+        <ContactForm/>
 
         <FloatingCTA type="connect" />
     </>;

@@ -2,6 +2,7 @@
 
 import BrandsWeRepresent from "@/components/BrandsWeRepresent";
 import CompanyLogos from "@/components/CompanyLogo";
+import ContactForm from "@/components/Contactform";
 import CorporateGiftingSolutions from "@/components/Corporategiftingsolutions";
 import FloatingCTA from "@/components/FloatingCTA";
 import MostPopularGifting from "@/components/Mostpopulargifting";
@@ -65,6 +66,8 @@ export default function CustomisedTshirts() {
         <CorporateGiftingSolutions />
 
         <BrandsWeRepresent />
+
+        <ContactForm/>
 
         <FloatingCTA type="connect" />
     </>;

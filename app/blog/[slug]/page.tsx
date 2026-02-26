@@ -31,7 +31,7 @@ export default async function BlogDetail({
   return (
     <>
       <div className="bg-gray-100 min-h-screen py-14">
-        <div className="max-w-7xl mx-auto grid grid-cols-3 gap-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 sm:px-6">
 
           {/* LEFT – BLOG CONTENT */}
           <div className="col-span-2 bg-white rounded-lg shadow-md p-10">
@@ -57,7 +57,10 @@ export default async function BlogDetail({
 
             {/* Blog Content */}
             <div className="prose max-w-none">
-              <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+              <div
+                className="blog-content"
+                dangerouslySetInnerHTML={{ __html: blog.content }}
+              />
             </div>
           </div>
 
@@ -106,8 +109,8 @@ export default async function BlogDetail({
         </div>
       </div>
 
-      <FloatingCTA type="connect"/>
-      <ContactForm/>
+      <FloatingCTA type="connect" />
+      <ContactForm />
     </>
   );
 }

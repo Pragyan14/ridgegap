@@ -10,6 +10,7 @@ import ProductsFeatures, { FeatureItem } from "@/components/ProductsFeatures";
 import RecentProjects from "@/components/Recentprojects";
 import TestimonialCarousel from "@/components/Testimonials";
 import FloatingCTA from "@/components/FloatingCTA";
+import ContactForm from "@/components/Contactform";
 
 const benefits = [
     {
@@ -118,6 +119,8 @@ export default function SwagPacks() {
         <CorporateGiftingSolutions />
 
         <BrandsWeRepresent />
+
+        <ContactForm/>
 
         <FloatingCTA type="connect"/>
     </>;

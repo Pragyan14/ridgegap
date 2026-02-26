@@ -1,5 +1,6 @@
 'use client';
 
+import ContactForm from "@/components/Contactform";
 import FloatingCTA from "@/components/FloatingCTA";
 
 // ── Shared style constants ──
@@ -157,6 +158,8 @@ export default function ContactsPage() {
 
         </div>
       </section>
+
+      <ContactForm/>
 
       <FloatingCTA/>
     </div>

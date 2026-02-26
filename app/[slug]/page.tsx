@@ -89,9 +89,9 @@ export default async function ProductCategoryPage({ params }: Props) {
         </div>
       ))}
 
-      <ContactForm />
-
       <BrandsWeRepresent />
+
+      <ContactForm />
 
       <FloatingCTA type="catalogue" />
     </>

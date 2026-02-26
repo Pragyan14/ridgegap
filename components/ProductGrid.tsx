@@ -29,12 +29,10 @@ const ProductGrid: React.FC<CardGridProps> = ({ mainHeading, items }) => {
           >
             {/* Image */}
             <div className="rounded-xl overflow-hidden bg-gray-100 mb-6">
-              <Image
+              <img
                 src={item.image}
                 alt={item.title}
-                fill
-                className="object-cover group-hover:scale-105 transition duration-300"
-                sizes="(max-width: 768px) 100vw, 25vw"
+                className="w-full h-42 object-cover group-hover:scale-105 transition duration-300"
               />
             </div>
 
