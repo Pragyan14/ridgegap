@@ -224,7 +224,7 @@ const schemaData = {
       inLanguage: "en"
     },
 
-    faqSchema
+    // faqSchema
   ]
 };
 
@@ -236,12 +236,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schemaData),
-          }}
-        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -250,6 +244,12 @@ export default function RootLayout({
         {children}
         <Toaster position="top-right" />
         {<Footer />}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaData),
+          }}
+        />
       </body>
     </html>
   );

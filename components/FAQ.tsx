@@ -3,7 +3,17 @@
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
 
-const faqs = [
+export interface FAQItemType {
+  question: string
+  answer: string
+}
+
+interface FAQSectionProps {
+  qna?: FAQItemType[]
+  title?: string
+}
+
+export const defaultFaqs: FAQItemType[] = [
   {
     question: "What types of corporate gifts do you offer?",
     answer:
@@ -89,11 +99,10 @@ function FAQItem({
 
   return (
     <div
-      className={`border-b border-[#d5dce3] ${
-        highlighted
+      className={`border-b border-[#d5dce3] ${highlighted
           ? "rounded border border-[#a8c4e0] bg-[#edf3fb] shadow-[0_0_0_3px_rgba(168,196,224,0.25)]"
           : ""
-      }`}
+        }`}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -104,15 +113,13 @@ function FAQItem({
           {number}. {question}
         </span>
         <ChevronDown
-          className={`h-5 w-5 shrink-0 text-[#5a6a7a] transition-transform duration-300 ${
-            isOpen ? "rotate-180" : ""
-          }`}
+          className={`h-5 w-5 shrink-0 text-[#5a6a7a] transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+            }`}
         />
       </button>
       <div
-        className={`grid transition-all duration-300 ease-in-out ${
-          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-        }`}
+        className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+          }`}
       >
         <div className="overflow-hidden">
           <p className="px-3 pb-5 text-sm leading-relaxed text-[#4a5a6a] md:text-base">
@@ -124,7 +131,11 @@ function FAQItem({
   )
 }
 
-export default function FAQSection() {
+export default function FAQSection({
+  qna,
+  title = "Frequently Asked Questions",
+}: FAQSectionProps) {
+  const faqs = qna && qna.length > 0 ? qna : defaultFaqs
   const leftColumn = faqs.slice(0, 6)
   const rightColumn = faqs.slice(6)
 
@@ -215,7 +226,7 @@ export default function FAQSection() {
           className="mb-14 text-center text-3xl font-bold text-[#0a2351] md:text-4xl lg:text-5xl"
           style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
         >
-          Frequently Asked Questions
+          {title}
         </h2>
 
         {/* Two independent columns so expanding one doesn't affect the other */}

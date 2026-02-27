@@ -5,12 +5,48 @@ import ProductGrid, { CardItem } from "@/components/ProductGrid";
 import CTABtn from "@/components/ui/CTABtn";
 import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import { cache } from "react";
+import FAQSection, { FAQItemType, defaultFaqs } from "@/components/FAQ";
 
 interface Props {
-  params: Promise<{
+  params: {
     slug: string;
-  }>;
+  };
+}
+
+const getProductPage = cache(async (slug: string) => {
+  return prisma.productPage.findUnique({
+    where: { slug },
+  });
+});
+
+function isFAQArray(data: unknown): data is FAQItemType[] {
+  if (!Array.isArray(data)) return false;
+
+  return data.every(
+    (item) =>
+      typeof item === "object" &&
+      item !== null &&
+      "question" in item &&
+      "answer" in item &&
+      typeof (item as any).question === "string" &&
+      typeof (item as any).answer === "string"
+  );
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const productPage = await getProductPage(slug);
+
+  if (!productPage) {
+    return {};
+  }
+
+  return {
+    title: productPage.seo_title || productPage.h1,
+    description: productPage.seo_description || "",
+  };
 }
 
 export default async function ProductCategoryPage({ params }: Props) {
@@ -20,15 +56,19 @@ export default async function ProductCategoryPage({ params }: Props) {
     notFound();
   }
 
-  const productPage = await prisma.productPage.findUnique({
-    where: {
-      slug,
-    },
-  });
+  const productPage = await getProductPage(slug);
 
   if (!productPage) {
     notFound();
   }
+
+  let faqs: FAQItemType[] | undefined;
+
+  if (isFAQArray(productPage.faqs)) {
+    faqs = productPage.faqs;
+  }
+
+  const faqsToUse = isFAQArray(productPage.faqs) ? productPage.faqs : defaultFaqs;
 
   const dataJson = productPage.data_json;
 
@@ -89,11 +129,35 @@ export default async function ProductCategoryPage({ params }: Props) {
         </div>
       ))}
 
+      <FAQSection qna={faqsToUse} />
+
       <BrandsWeRepresent />
 
       <ContactForm />
 
       <FloatingCTA type="catalogue" />
+
+      {faqsToUse.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": `https://ridgegap.com/${slug}/#faq`,
+              mainEntity: faqsToUse.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
+
     </>
   );
 }
