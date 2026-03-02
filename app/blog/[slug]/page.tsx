@@ -56,7 +56,7 @@ export default async function BlogDetail({
             />
 
             {/* Blog Content */}
-            <div className="prose max-w-none">
+            <div className="prose max-w-none text-justify">
               <div
                 className="blog-content"
                 dangerouslySetInnerHTML={{ __html: blog.content }}
@@ -66,7 +66,7 @@ export default async function BlogDetail({
 
 
           {/* RIGHT – SIDEBAR */}
-          <div className="space-y-6">
+          <div className="space-y-6 self-start sticky top-24 h-fit">
 
             {/* Recent Posts Card */}
             <div className="bg-white rounded-lg shadow-md p-6">

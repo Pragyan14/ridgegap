@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 export default function CTAForm() {
   const [formData, setFormData] = useState({
@@ -10,7 +11,6 @@ export default function CTAForm() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -23,18 +23,40 @@ export default function CTAForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setSubmitMessage('Thank you! We will contact you soon.');
-      setIsSubmitting(false);
-      setFormData({ fullName: '', email: '', phone: '' });
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          message: 'CTA Form Submission - User requested a free quote.',
+          source: 'CTA Section',
+          pageUrl: window.location.href,
+        }),
+      });
 
-      setTimeout(() => setSubmitMessage(''), 5000);
-    }, 1000);
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success('Thank you! We will contact you soon.');
+        setFormData({ fullName: '', email: '', phone: '' });
+      } else {
+        toast.error(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <section className="relative py-20 overflow-hidden">
-      {/* Fixed Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{
@@ -43,18 +65,14 @@ export default function CTAForm() {
         }}
       />
 
-      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-linear-to-r from-[#0c4a6e]/80 via-[#1e40af]/80 to-[#4338ca]/80" />
 
-      {/* Decorative Blur Shapes */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-10">
           <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
             Ready to Get Started?
@@ -64,10 +82,8 @@ export default function CTAForm() {
           </p>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            {/* Full Name */}
             <input
               type="text"
               name="fullName"
@@ -78,7 +94,6 @@ export default function CTAForm() {
               className="w-full px-6 py-4 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
             />
 
-            {/* Email */}
             <input
               type="email"
               name="email"
@@ -89,7 +104,6 @@ export default function CTAForm() {
               className="w-full px-6 py-4 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
             />
 
-            {/* Phone */}
             <input
               type="tel"
               name="phone"
@@ -100,7 +114,6 @@ export default function CTAForm() {
               className="w-full px-6 py-4 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
             />
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={isSubmitting}
@@ -109,13 +122,6 @@ export default function CTAForm() {
               {isSubmitting ? 'SENDING...' : 'SEND'}
             </button>
           </div>
-
-          {/* Success Message */}
-          {submitMessage && (
-            <div className="mt-6 p-4 bg-green-500 text-white rounded-lg text-center font-semibold">
-              {submitMessage}
-            </div>
-          )}
         </form>
       </div>
     </section>

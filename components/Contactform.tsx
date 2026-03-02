@@ -32,7 +32,7 @@ export default function ContactForm() {
         },
         body: JSON.stringify({
           formData,
-          source: 'COntact page',
+          source: 'Contact page',
           pageUrl: window.location.href
         }),
       });
