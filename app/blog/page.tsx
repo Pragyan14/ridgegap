@@ -6,6 +6,8 @@ const POSTS_PER_PAGE = 10;
 
 export const revalidate = 60;
 
+const DIRECTUS_URL = process.env.NEXT_PUBLIC_DIRECTUS_URL || "http://localhost:8055";
+
 export default async function BlogPage() {
   const currentPage = 1;
 
@@ -13,7 +15,7 @@ export default async function BlogPage() {
     const offset = (page - 1) * POSTS_PER_PAGE;
 
     const res = await fetch(
-      `http://localhost:8055/items/blogs?filter[status][_eq]=publish&limit=${POSTS_PER_PAGE}&offset=${offset}&sort=-date_created&meta=filter_count`,
+      `${DIRECTUS_URL}/items/blogs?filter[status][_eq]=publish&limit=${POSTS_PER_PAGE}&offset=${offset}&sort=-date_created&meta=filter_count`,
       {
         next: { revalidate: 60 }, // Next.js caching
         headers: {
