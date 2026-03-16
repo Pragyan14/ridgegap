@@ -11,11 +11,9 @@ export default function BlogCard({ blog }: { blog: any }) {
     <article className="h-full border border-gray-300 p-4 shadow-sm bg-white">
       <div className="mb-3 ">
         <Link href={`/blog/${blog.slug}`}>
-          <Image
-            src={blog.featured_image || "/images/default.jpg"}
-            alt={blog.title}
-            width={800}
-            height={600}
+          <img
+            src={blog.featured_image_url}
+            alt={blog.slug} // use meaningful alt
             className="w-full h-86 object-cover rounded-4xl"
           />
         </Link>

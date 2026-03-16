@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
+        protocol: "http",          // Use http for localhost
+        hostname: "localhost",     // Your Directus host
+        port: "8055",              // Required if using non-standard port
+        pathname: "/assets/**",    // Match all assets
+      },
+      {
         protocol: "https",
         hostname: "ridgegap.com",
         pathname: "/**",

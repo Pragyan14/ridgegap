@@ -54,7 +54,7 @@ model ProductPage {
   seo_description String?
   hero_subheading String?
   data_json       Json
-  faqs            Json?     // 👈 Add this
+  faqs            Json?
   created_at      DateTime @default(now())
   updated_at      DateTime @updatedAt
 

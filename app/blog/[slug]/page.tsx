@@ -1,9 +1,59 @@
 import ContactForm from "@/components/Contactform";
 import FloatingCTA from "@/components/FloatingCTA";
-import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
 export const revalidate = 60;
+
+const DIRECTUS_URL =
+  process.env.NEXT_PUBLIC_DIRECTUS_URL || "http://localhost:8055";
+
+async function getBlogBySlug(slug: string) {
+  const res = await fetch(
+    `${DIRECTUS_URL}/items/blogs?filter[slug][_eq]=${slug}&filter[status][_eq]=publish&limit=1`,
+    {
+      next: { revalidate: 60 },
+      headers: {
+        "Content-Type": "application/json",
+        // Authorization: `Bearer ${process.env.DIRECTUS_TOKEN}`, // if private
+      },
+    }
+  );
+
+  const json = await res.json();
+
+  return json.data?.[0] || null;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+
+  const { slug } = await params;
+
+  const blog = await getBlogBySlug(slug);
+
+  if (!blog) {
+    return {
+      title: "Blog Not Found",
+      description: "The requested blog could not be found",
+    };
+  }
+
+  return {
+    title: blog.seo_title,
+    description: blog.seo_description,
+    openGraph: {
+      title: blog.title,
+      description: blog.description,
+      images: blog.featured_image
+        ? [`${DIRECTUS_URL}/assets/${blog.featured_image}`]
+        : [],
+    },
+  };
+}
 
 export default async function BlogDetail({
   params,
@@ -14,19 +64,17 @@ export default async function BlogDetail({
 
   if (!slug) return notFound();
 
-  const blog = await prisma.blog.findFirst({
-    where: { slug, status: "publish" },
-  });
+  const blog = await getBlogBySlug(slug);
 
   if (!blog) return notFound();
 
-  const formattedDate = blog.published_at
-    ? new Date(blog.published_at).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    })
-    : "";
+  const formattedDate = blog.date_created
+    ? new Date(blog.date_created).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : "";   
 
   return (
     <>
@@ -50,7 +98,7 @@ export default async function BlogDetail({
             </p>
 
             <img
-              src={blog.featured_image ?? undefined}
+              src={blog.featured_image_url}
               alt={blog.slug}
               className="my-6 rounded-4xl"
             />
@@ -63,7 +111,6 @@ export default async function BlogDetail({
               />
             </div>
           </div>
-
 
           {/* RIGHT – SIDEBAR */}
           <div className="space-y-6 self-start sticky top-24 h-fit">
@@ -90,7 +137,6 @@ export default async function BlogDetail({
               </ul>
             </div>
 
-
             {/* Categories Card */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-blue-800 mb-4">
@@ -105,7 +151,6 @@ export default async function BlogDetail({
             </div>
 
           </div>
-
         </div>
       </div>
 

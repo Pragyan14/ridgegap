@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 import BlogList from "@/components/BlogList";
 import FloatingCTA from "@/components/FloatingCTA";
 import ContactForm from "@/components/Contactform";
@@ -10,18 +9,31 @@ export const revalidate = 60;
 export default async function BlogPage() {
   const currentPage = 1;
 
-  // Total posts
-  const totalPosts = await prisma.blog.count({
-    where: { status: "publish" },
-  });
-  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+  async function getBlogs(page = 1) {
+    const offset = (page - 1) * POSTS_PER_PAGE;
 
-  // Fetch posts for page 1
-  const blogs = await prisma.blog.findMany({
-    where: { status: "publish" },
-    orderBy: { published_at: "desc" },
-    take: POSTS_PER_PAGE,
-  });
+    const res = await fetch(
+      `http://localhost:8055/items/blogs?filter[status][_eq]=publish&limit=${POSTS_PER_PAGE}&offset=${offset}&sort=-date_created&meta=filter_count`,
+      {
+        next: { revalidate: 60 }, // Next.js caching
+        headers: {
+          "Content-Type": "application/json",
+          // "Authorization": `Bearer ${process.env.DIRECTUS_TOKEN}`, // if needed
+        },
+      }
+    );
+
+    const json = await res.json();
+
+    return {
+      blogs: json.data,
+      totalPosts: json.meta.filter_count,
+    };
+  }
+
+  const { blogs, totalPosts } = await getBlogs(currentPage);
+
+  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
 
   return (
     <>
@@ -30,7 +42,7 @@ export default async function BlogPage() {
         currentPage={currentPage}
         totalPages={totalPages}
       />
-      <ContactForm/>
+      <ContactForm />
       <FloatingCTA type="connect" />
     </>
   );
