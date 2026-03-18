@@ -9,30 +9,37 @@ const DIRECTUS_URL =
   process.env.NEXT_PUBLIC_DIRECTUS_URL || "http://localhost:8055";
 
 async function getBlogBySlug(slug: string) {
-  const res = await fetch(
-    `${DIRECTUS_URL}/items/blogs?filter[slug][_eq]=${slug}&filter[status][_eq]=publish&limit=1`,
-    {
-      next: { revalidate: 60 },
-      headers: {
-        "Content-Type": "application/json",
-        // Authorization: `Bearer ${process.env.DIRECTUS_TOKEN}`, // if private
-      },
+  try {
+    const res = await fetch(
+      `${DIRECTUS_URL}/items/blogs?filter[slug][_eq]=${slug}&filter[status][_eq]=publish&limit=1`,
+      {
+        next: { revalidate: 60 },
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!res.ok) {
+      console.error(`[getBlogBySlug] Directus error: ${res.status} ${res.statusText}`);
+      return null;
     }
-  );
 
-  const json = await res.json();
+    const json = await res.json();
+    return json?.data?.[0] ?? null;
 
-  return json.data?.[0] || null;
+  } catch (err) {
+    console.error("[getBlogBySlug] Failed to fetch blog:", err);
+    return null;
+  }
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-
   const { slug } = await params;
-
   const blog = await getBlogBySlug(slug);
 
   if (!blog) {
@@ -48,9 +55,8 @@ export async function generateMetadata({
     openGraph: {
       title: blog.title,
       description: blog.description,
-      images: blog.featured_image
-        ? [`${DIRECTUS_URL}/assets/${blog.featured_image}`]
-        : [],
+      // ✅ Use featured_image_url (ImageKit) instead of Directus asset URL
+      images: blog.featured_image_url ? [blog.featured_image_url] : [],
     },
   };
 }
@@ -74,7 +80,7 @@ export default async function BlogDetail({
         month: "long",
         day: "numeric",
       })
-    : "";   
+    : "";
 
   return (
     <>
@@ -97,17 +103,20 @@ export default async function BlogDetail({
               <span className="text-blue-600">ridgegap_user</span>
             </p>
 
-            <img
-              src={blog.featured_image_url}
-              alt={blog.slug}
-              className="my-6 rounded-4xl"
-            />
+            {/* ✅ Only render image if URL exists */}
+            {blog.featured_image_url && (
+              <img
+                src={blog.featured_image_url}
+                alt={blog.title ?? blog.slug}
+                className="my-6 rounded-4xl w-full object-cover"
+              />
+            )}
 
             {/* Blog Content */}
             <div className="prose max-w-none text-justify">
               <div
                 className="blog-content"
-                dangerouslySetInnerHTML={{ __html: blog.content }}
+                dangerouslySetInnerHTML={{ __html: blog.content ?? "" }}
               />
             </div>
           </div>
@@ -120,7 +129,6 @@ export default async function BlogDetail({
               <h3 className="text-xl font-semibold text-blue-800 mb-4">
                 Recent Posts
               </h3>
-
               <ul className="space-y-3 text-gray-700 text-sm">
                 <li className="hover:text-blue-600 cursor-pointer">
                   Corporate Gifting for Gen Z Employees: A Complete 2026 Guide
@@ -142,7 +150,6 @@ export default async function BlogDetail({
               <h3 className="text-xl font-semibold text-blue-800 mb-4">
                 Categories
               </h3>
-
               <ul className="text-sm text-blue-600">
                 <li className="hover:underline cursor-pointer">
                   Corporate Gifting
