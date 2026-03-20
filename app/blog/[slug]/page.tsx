@@ -11,7 +11,7 @@ const DIRECTUS_URL =
 async function getBlogBySlug(slug: string) {
   try {
     const res = await fetch(
-      `${DIRECTUS_URL}/items/blogs?filter[slug][_eq]=${slug}&filter[status][_eq]=publish&limit=1`,
+      `${DIRECTUS_URL}/items/blogs?filter[slug][_eq]=${slug}&filter[status][_eq]=published&limit=1`,
       {
         next: { revalidate: 60 },
         headers: {
@@ -21,7 +21,6 @@ async function getBlogBySlug(slug: string) {
     );
 
     if (!res.ok) {
-      console.error(`[getBlogBySlug] Directus error: ${res.status} ${res.statusText}`);
       return null;
     }
 
@@ -29,7 +28,6 @@ async function getBlogBySlug(slug: string) {
     return json?.data?.[0] ?? null;
 
   } catch (err) {
-    console.error("[getBlogBySlug] Failed to fetch blog:", err);
     return null;
   }
 }

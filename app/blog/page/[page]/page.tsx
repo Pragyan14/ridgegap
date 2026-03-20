@@ -15,7 +15,7 @@ async function getBlogs(page: number) {
 
   try {
     const res = await fetch(
-      `${DIRECTUS_URL}/items/blogs?filter[status][_eq]=publish&limit=${POSTS_PER_PAGE}&offset=${offset}&sort=-date_created&meta=filter_count`,
+      `${DIRECTUS_URL}/items/blogs?filter[status][_eq]=published&limit=${POSTS_PER_PAGE}&offset=${offset}&sort=-date_created&meta=filter_count`,
       {
         next: { revalidate: 60 },
         headers: {
@@ -38,8 +38,6 @@ async function getBlogs(page: number) {
     };
 
   } catch (err) {
-    // Handle network errors, Directus being down, etc.
-    console.error("[getBlogs] Failed to fetch blogs:", err);
     return { blogs: [], totalPosts: 0 };
   }
 }
