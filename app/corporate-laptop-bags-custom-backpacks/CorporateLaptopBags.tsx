@@ -91,8 +91,8 @@ export default function CorporateLaptopBags() {
 
         <ProductBenefit
             benefits={benefits}
-            subtitle={"Why are Welcome Packs so important?"}
-            title={"Benefits of new joiner welcome packs"}
+            subtitle={"Why are Corporate Bags so important?"}
+            title={"Benefits of gifting corporate bags & laptop bags"}
         />
 
         <MostPopularGifting />

@@ -75,8 +75,8 @@ export default function SpecialCustomMadeProjects() {
 
         <ProductBenefit
             benefits={benefits}
-            subtitle={"Why are Welcome Packs so important?"}
-            title={"Benefits of new joiner welcome packs"}
+            subtitle={"Why is it so important?"}
+            title={"Benefits of custom manufactured gifts"}
         />
 
         <MostPopularGifting />
