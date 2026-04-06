@@ -62,7 +62,19 @@ export default function EventsConferencePromotionalGifts() {
 
         <CompanyLogos />
 
-        <RecentProjects subtitle={"If you think of giving away promotional items at your next event, conference or promotional activity, we’re here to help! We offer everything from swag bags & pens to t-shirts with your logo on them."} />
+        <RecentProjects
+            subtitle={"If you think of giving away promotional items at your next event, conference or promotional activity, we’re here to help! We offer everything from swag bags & pens to t-shirts with your logo on them."}
+            projects={[
+                { image: "/images/event-and-conference.png", title: "Festive Gifting" },
+                { image: "/images/event-and-conference-2.png", },
+                { image: "/images/event-and-conference-4.png", title: "Festive Gifting" },
+                { image: "/images/event-and-conference-5.png", },
+                { image: "/images/event-and-conference-1.png", },
+                { image: "/images/event-and-conference-3.png", title: "Festive Gifting" },
+                { image: "/images/event-conference06.png", },
+                { image: "/images/event-and-conference-6.png", title: "Festive Gifting" },
+            ]}
+        />
 
         <PromoSection
             text={"A well-thought-out promotional and event gift communicates gratitude."}

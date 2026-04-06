@@ -102,6 +102,16 @@ export default function SwagPacks() {
 
         <RecentProjects
             subtitle={"We offer a complete branded merchandise solution, custom tailored to your brand, service or product. We believe in telling your story. Our swag packs are specially designed & curated to your brand, budget & needs."}
+            projects={[
+                { image: "/images/swag-pack.png", title: "Festive Gifting" },
+                { image: "/images/swag-pack-2-1.png", },
+                { image: "/images/swag-pack-4-1.png", title: "Festive Gifting" },
+                { image: "/images/swag-pack-5-1.png", },
+                { image: "/images/swag-pack-1-1.png", },
+                { image: "/images/swag-pack-3-1.png", title: "Festive Gifting" },
+                { image: "/images/swag-pack-6.png", },
+                { image: "/images/swag-pack-6-1.png", title: "Festive Gifting" },
+            ]}
         />
 
         <PromoSection

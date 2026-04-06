@@ -10,9 +10,11 @@ export interface BenefitItem {
 
 interface ProductBenefitProps {
   benefits: BenefitItem[];
-  subtitle: string;   // for <p>
-  title: string;      // for <h3>
-  watermarkText?: string; // optional (BONUS)
+  subtitle: string;
+  title: string;
+  watermarkText?: string;
+  description1?: string;
+  description2?: string;
 }
 
 export default function ProductBenefit({
@@ -20,6 +22,8 @@ export default function ProductBenefit({
   subtitle,
   title,
   watermarkText = "BENEFITS",
+  description1,
+  description2
 }: ProductBenefitProps) {
   return (
     <section className="relative py-14 md:py-20 bg-white overflow-hidden">
@@ -37,7 +41,7 @@ export default function ProductBenefit({
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="mb-10 md:mb-14">
+        <div className="mb-6 md:mb-10">
           <p className="text-gray-500 text-sm md:text-base mb-1">
             {subtitle}
           </p>
@@ -47,6 +51,17 @@ export default function ProductBenefit({
           >
             {title}
           </h3>
+          {description1 && (
+            <p className="text-gray-500 text-sm md:text-base mt-4">
+              {description1}
+            </p>
+          )}
+
+          {description2 && (
+            <p className="text-gray-500 text-sm md:text-base mt-4">
+              {description2}
+            </p>
+          )}
         </div>
 
         {/* Grid */}

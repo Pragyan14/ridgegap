@@ -120,6 +120,14 @@ export default function NewJoinerKits() {
 
         <RecentProjects 
             subtitle={"At Ridge gap, we offer a wide range of new employee joining kits to help your employees settle in quickly and feel part of the team."}
+            projects={[
+                {image: "/images/recent-project-1.png", },
+                {image: "/images/recent-project-.png", },
+                {image: "/images/recent-project-2-1.png", },
+                {image: "/images/recent-project-3.png", },
+                {image: "/images/recent-project-1-1.png", },
+                {image: "/images/recent-project-2.png", },
+            ]}
         />
 
         <PromoSection
@@ -131,6 +139,8 @@ export default function NewJoinerKits() {
             benefits={benefits}
             subtitle={"Why are Welcome Packs so important?"}
             title={"Benefits of new joiner welcome packs"}
+            description1={"HR professionals know exactly how employee onboarding plays a vital role in creating a productive workforce. New joiner kits are one of the key elements to successful employee onboarding. By providing your new employees with a branded and personalized welcome pack from your company, you will demonstrate your commitment to their professional success."}
+            description2={"Why new joiner kits must be a part of your onboarding?"}
         />
 
         <MostPopularGifting />

@@ -52,7 +52,14 @@ export default function LuxuryCXOGifting() {
             steps={stepsData}
         />
 
-        <RecentProjects subtitle={"Luxury corporate gifts are something many businesses consider. But it’s not easy to pull together a thoughtful, impactful gift for an important client. Given the company’s needs and unique circumstances, different companies provide different items for their VIP clients."}/>
+        <RecentProjects
+            subtitle={"Luxury corporate gifts are something many businesses consider. But it’s not easy to pull together a thoughtful, impactful gift for an important client. Given the company’s needs and unique circumstances, different companies provide different items for their VIP clients."}
+            projects={[
+                { image: "/images/luxury-gift.png", title: "Festive Gifting" },
+                { image: "/images/luxury-gift-2.png", },
+                { image: "/images/luxury-gift-1.png", title: "Festive Gifting" },
+            ]}
+        />
 
         <MostPopularGifting />
 
@@ -67,8 +74,8 @@ export default function LuxuryCXOGifting() {
 
         <BrandsWeRepresent />
 
-        <ContactForm/>
+        <ContactForm />
 
-        <FloatingCTA type="connect"/>
+        <FloatingCTA type="connect" />
     </>;
 }

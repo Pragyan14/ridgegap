@@ -72,7 +72,17 @@ export default function SpecialCustomMadeProjects() {
 
         <CompanyLogos />
 
-        <RecentProjects subtitle={"Whether you are planning a prototype model of a rover to the moon or a rainbow coloured wheel of threads, we have achieved the best quality & highest standards in our industry. Check out our exclusive custom projects to see what we have done for our clients."}/>
+        <RecentProjects
+            subtitle={"Whether you are planning a prototype model of a rover to the moon or a rainbow coloured wheel of threads, we have achieved the best quality & highest standards in our industry. Check out our exclusive custom projects to see what we have done for our clients."}
+            projects={[
+                { image: "/images/special-custom-made-projects.png", title: "Festive Gifting" },
+                { image: "/images/custom-projects03.png", },
+                { image: "/images/custom-projects05.png", title: "Festive Gifting" },
+                { image: "/images/special-custom-made-projects-2.png",  },
+                { image: "/images/custom-projects02.png", title: "Festive Gifting" },
+                { image: "/images/special-custom-made-projects-1.png",  },
+            ]}
+        />
 
         <PromoSection
             text={"Turn your ideas to reality with custom made gifts."}
@@ -93,8 +103,8 @@ export default function SpecialCustomMadeProjects() {
 
         <BrandsWeRepresent />
 
-        <ContactForm/>
+        <ContactForm />
 
-        <FloatingCTA type="connect"/>
+        <FloatingCTA type="connect" />
     </>;
 }

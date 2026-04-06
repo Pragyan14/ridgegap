@@ -115,6 +115,16 @@ export default function CuratedGiftBoxes() {
 
         <RecentProjects
             subtitle={"We take immense pride in curating the most exquisite and thoughtful gift hampers and boxes that enhance the joys of gifting."}
+            projects={[
+                {image: "/images/curated-box-.png", },
+                {image: "/images/curated-box-2.png", title: 'Festive Gifting'},
+                {image: "/images/curated-box-4.png", },
+                {image: "/images/curated-box-6.png", title: 'Festive Gifting'},
+                {image: "/images/curated-box-1.png", title: 'Festive Gifting'},
+                {image: "/images/curated-box-3.png", },
+                {image: "/images/curated-box-5.png", title: 'Festive Gifting'},
+                {image: "/images/curated-box-7.png", },
+            ]}
         />
 
         <PromoSection
@@ -124,8 +134,8 @@ export default function CuratedGiftBoxes() {
 
         <ProductBenefit
             benefits={benefits}
-            subtitle={"Why are Welcome Packs so important?"}
-            title={"Benefits of new joiner welcome packs"}
+            subtitle={"Why are Curated Gift Boxes so important?"}
+            title={"Benefits of Curated Corporate Gifts"}
         />
 
         <MostPopularGifting />
@@ -133,7 +143,7 @@ export default function CuratedGiftBoxes() {
         <ProductsFeatures
             features={featuresData}
             heading="Features"
-            subheading="Get started on the path to good employee retention & engagement by providing your new employees with a strong on boarding experience. We help companies just like yours enhance their employee on boarding experience with high quality welcome packs to make employees feel welcomed, valued & attended to before they even step foot in your building."
+            subheading="Make the next gifting special, and exciting with a customised corporate gift box. We have a vast range of products to choose from that can be personalised to your liking."
         />
 
         <PromoSection

@@ -54,6 +54,14 @@ export default function CustomisedTshirts() {
 
         <RecentProjects
             subtitle={"Customise your t-shirts, hoodies and jackets with our range of custom embroidery and branding. We can bring your logo to life on any of our apparel!"}
+            projects={[
+                { image: "/images/customized-tshirt6.png", title: "Festive Gifting" },
+                { image: "/images/custom-tshirt.png", },
+                { image: "/images/customized-tshirt2.png", title: "Festive Gifting" },
+                { image: "/images/customized-tshirt5.png", title: "Festive Gifting" },
+                { image: "/images/customized-tshirt1.png", },
+                { image: "/images/customized-tshirt3.png", title: "Festive Gifting" },
+            ]}
         />
 
         <MostPopularGifting />

@@ -83,7 +83,17 @@ export default function SustainableEcoFriendlyGifting() {
 
         <CompanyLogos />
 
-        <RecentProjects subtitle={"Do you want to make a statement that you care about the environment and what it offers us? Do you have clients who love to recycle and reuse? Or are your employees committed to reducing waste wherever they see it? We are here to help you make a difference on a global scale while bringing joy to someone special."}/>
+        <RecentProjects
+            subtitle={"Do you want to make a statement that you care about the environment and what it offers us? Do you have clients who love to recycle and reuse? Or are your employees committed to reducing waste wherever they see it? We are here to help you make a difference on a global scale while bringing joy to someone special."}
+            projects={[
+                { image: "/images/sustainable-4.png", title: "Festive Gifting" },
+                { image: "/images/sustainable-project.png", },
+                { image: "/images/sustainable-5.png", title: "Festive Gifting" },
+                { image: "/images/sustainable-8.png", },
+                { image: "/images/sustainable-3.png", title: "Festive Gifting" },
+                { image: "/images/sustainable-6.png", },
+            ]}
+        />
 
         <MostPopularGifting />
 
@@ -104,8 +114,8 @@ export default function SustainableEcoFriendlyGifting() {
 
         <BrandsWeRepresent />
 
-        <ContactForm/>
+        <ContactForm />
 
-        <FloatingCTA type="connect"/>
+        <FloatingCTA type="connect" />
     </>;
 }

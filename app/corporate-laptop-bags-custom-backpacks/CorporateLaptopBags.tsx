@@ -90,6 +90,16 @@ export default function CorporateLaptopBags() {
 
         <RecentProjects
             subtitle={"Custom-made Backpacks & Corporate Laptop Bags would make an ideal promotional gift for staff, clients or customers."}
+            projects={[
+                { image: "/images/custom-bag-1.png", title: "Festive Gifting" },
+                { image: "/images/laptopbag03.png", },
+                { image: "/images/laptopbag05.png", title: "Festive Gifting" },
+                { image: "/images/laptopbag07.png", },
+                { image: "/images/backpack.png", },
+                { image: "/images/laptopbag04.png", title: "Festive Gifting" },
+                { image: "/images/laptopbag06.png", },
+                { image: "/images/custom-bag.png", title: "Festive Gifting" },
+            ]}
         />
 
         <PromoSection
