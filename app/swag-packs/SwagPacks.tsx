@@ -12,6 +12,7 @@ import TestimonialCarousel from "@/components/Testimonials";
 import FloatingCTA from "@/components/FloatingCTA";
 import ContactForm from "@/components/Contactform";
 import PromoSection from "@/components/ui/PromoSection";
+import SwagPackSection from "@/components/SwagPackSection";
 
 const benefits = [
     {
@@ -107,6 +108,8 @@ export default function SwagPacks() {
             text={"Ready to Build a swag pack for your employees, Clients or partners"}
             buttonText={"Talk to us Now!"}
         />
+
+        <SwagPackSection/>
 
         <ProductBenefit
             benefits={benefits}
