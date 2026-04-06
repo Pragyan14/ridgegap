@@ -12,6 +12,7 @@ import TestimonialCarousel from "@/components/Testimonials";
 import JoinerSteps, { StepCard } from "@/components/JoinerSteps";
 import FloatingCTA from "@/components/FloatingCTA";
 import ContactForm from "@/components/Contactform";
+import PromoSection from "@/components/ui/PromoSection";
 
 
 const stepsData: StepCard[] = [
@@ -117,7 +118,14 @@ export default function NewJoinerKits() {
             steps={stepsData}
         />
 
-        <RecentProjects />
+        <RecentProjects 
+            subtitle={"At Ridge gap, we offer a wide range of new employee joining kits to help your employees settle in quickly and feel part of the team."}
+        />
+
+        <PromoSection
+            text={"Wish to build your custom designed welcome pack for new Employees?"}
+            buttonText={"Talk to us now!"}
+        />
 
         <ProductBenefit
             benefits={benefits}
@@ -126,6 +134,11 @@ export default function NewJoinerKits() {
         />
 
         <MostPopularGifting />
+
+        <PromoSection
+            text={"Welcome aboard! Take advantage of our customized new employee joiner kits, welcome packs and explore gifts for your new hires!"}
+            buttonText={"Download Now!"}
+        />
 
         <ProductsFeatures
             features={featuresData}

@@ -10,6 +10,7 @@ import ProductHero from "@/components/ProductHero";
 import ProductsFeatures, { FeatureItem } from "@/components/ProductsFeatures";
 import RecentProjects from "@/components/Recentprojects";
 import TestimonialCarousel from "@/components/Testimonials";
+import PromoSection from "@/components/ui/PromoSection";
 
 
 const featuresData: FeatureItem[] = [
@@ -51,9 +52,16 @@ export default function CustomisedTshirts() {
 
         <CompanyLogos />
 
-        <RecentProjects />
+        <RecentProjects
+            subtitle={"Customise your t-shirts, hoodies and jackets with our range of custom embroidery and branding. We can bring your logo to life on any of our apparel!"}
+        />
 
         <MostPopularGifting />
+
+        <PromoSection
+            text={"Wish to Custom make & manufacture your own T-shirts/Jackets/hoodie as per your brand colors."}
+            buttonText={"Connect Now!"}
+        />
 
         <ProductsFeatures
             features={featuresData}
@@ -67,7 +75,7 @@ export default function CustomisedTshirts() {
 
         <BrandsWeRepresent />
 
-        <ContactForm/>
+        <ContactForm />
 
         <FloatingCTA type="connect" />
     </>;

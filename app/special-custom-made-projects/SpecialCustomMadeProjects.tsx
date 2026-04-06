@@ -10,6 +10,7 @@ import ProductBenefit from "@/components/ProductBenfits";
 import ProductHero from "@/components/ProductHero";
 import RecentProjects from "@/components/Recentprojects";
 import TestimonialCarousel from "@/components/Testimonials";
+import PromoSection from "@/components/ui/PromoSection";
 
 const benefits = [
     {
@@ -71,7 +72,12 @@ export default function SpecialCustomMadeProjects() {
 
         <CompanyLogos />
 
-        <RecentProjects />
+        <RecentProjects subtitle={"Whether you are planning a prototype model of a rover to the moon or a rainbow coloured wheel of threads, we have achieved the best quality & highest standards in our industry. Check out our exclusive custom projects to see what we have done for our clients."}/>
+
+        <PromoSection
+            text={"Turn your ideas to reality with custom made gifts."}
+            buttonText={"Talk to us Now!"}
+        />
 
         <ProductBenefit
             benefits={benefits}

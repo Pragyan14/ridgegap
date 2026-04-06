@@ -10,6 +10,7 @@ import TestimonialCarousel from "@/components/Testimonials";
 import JoinerSteps, { StepCard } from "@/components/JoinerSteps";
 import FloatingCTA from "@/components/FloatingCTA";
 import ContactForm from "@/components/Contactform";
+import PromoSection from "@/components/ui/PromoSection";
 
 
 const stepsData: StepCard[] = [
@@ -51,9 +52,14 @@ export default function LuxuryCXOGifting() {
             steps={stepsData}
         />
 
-        <RecentProjects />
+        <RecentProjects subtitle={"Luxury corporate gifts are something many businesses consider. But it’s not easy to pull together a thoughtful, impactful gift for an important client. Given the company’s needs and unique circumstances, different companies provide different items for their VIP clients."}/>
 
         <MostPopularGifting />
+
+        <PromoSection
+            text={"If you’re looking to give a gift that will wow your clients, then look no further than our luxury corporate gift collection."}
+            buttonText={"Request a catalogue Now!"}
+        />
 
         <TestimonialCarousel />
 

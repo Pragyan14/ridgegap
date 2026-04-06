@@ -10,6 +10,7 @@ import ProductBenefit from "@/components/ProductBenfits";
 import ProductHero from "@/components/ProductHero";
 import RecentProjects from "@/components/Recentprojects";
 import TestimonialCarousel from "@/components/Testimonials";
+import PromoSection from "@/components/ui/PromoSection";
 
 const benefits = [
     {
@@ -61,7 +62,12 @@ export default function EventsConferencePromotionalGifts() {
 
         <CompanyLogos />
 
-        <RecentProjects />
+        <RecentProjects subtitle={"If you think of giving away promotional items at your next event, conference or promotional activity, we’re here to help! We offer everything from swag bags & pens to t-shirts with your logo on them."} />
+
+        <PromoSection
+            text={"A well-thought-out promotional and event gift communicates gratitude."}
+            buttonText={"Request a call back!"}
+        />
 
         <ProductBenefit
             benefits={benefits}
@@ -71,14 +77,19 @@ export default function EventsConferencePromotionalGifts() {
 
         <MostPopularGifting />
 
+        <PromoSection
+            text={"Event & conference giveaways are a great way for businesses & brands to reach out to their audiences, promote their brand & product in a fun & entertaining way."}
+            buttonText={"Connect Now!"}
+        />
+
         <TestimonialCarousel />
 
         <CorporateGiftingSolutions />
 
         <BrandsWeRepresent />
 
-        <ContactForm/>
+        <ContactForm />
 
-        <FloatingCTA type="connect"/>
+        <FloatingCTA type="connect" />
     </>;
 }

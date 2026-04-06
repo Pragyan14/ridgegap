@@ -12,6 +12,7 @@ import TestimonialCarousel from "@/components/Testimonials";
 import JoinerSteps, { StepCard } from "@/components/JoinerSteps";
 import FloatingCTA from "@/components/FloatingCTA";
 import ContactForm from "@/components/Contactform";
+import PromoSection from "@/components/ui/PromoSection";
 
 
 const stepsData: StepCard[] = [
@@ -82,9 +83,14 @@ export default function SustainableEcoFriendlyGifting() {
 
         <CompanyLogos />
 
-        <RecentProjects />
+        <RecentProjects subtitle={"Do you want to make a statement that you care about the environment and what it offers us? Do you have clients who love to recycle and reuse? Or are your employees committed to reducing waste wherever they see it? We are here to help you make a difference on a global scale while bringing joy to someone special."}/>
 
         <MostPopularGifting />
+
+        <PromoSection
+            text={"Our range of sustainable products makes it easy for your clients and employees to reduce their impact on the environment, while still being able to enjoy a great product."}
+            buttonText={"Request a catalog!"}
+        />
 
         <ProductsFeatures
             features={featuresData}

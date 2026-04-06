@@ -2,7 +2,13 @@
 
 import Image from "next/image";
 
-export default function RecentProjects() {
+interface RecentProjectsProps{
+  subtitle?: string,
+}
+
+const defaultSubtitle = "Ridgegap has been helping clients for years, providing high quality gifts & products with customer satisfaction as our highest priority. Through our work, our customers have been able to express their gratitude & appreciation at every gifting occasion."
+
+export default function RecentProjects({subtitle = defaultSubtitle}: RecentProjectsProps) {
   const projects = [
     {
       image: '/images/recent-project-3.png',
@@ -61,7 +67,7 @@ export default function RecentProjects() {
             Recent Projects Completed
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Ridgegap has been helping clients for years, providing high quality gifts & products with customer satisfaction as our highest priority. Through our work, our customers have been able to express their gratitude & appreciation at every gifting occasion.
+            {subtitle}
           </p>
         </div>
 

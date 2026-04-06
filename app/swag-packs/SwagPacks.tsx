@@ -11,6 +11,7 @@ import RecentProjects from "@/components/Recentprojects";
 import TestimonialCarousel from "@/components/Testimonials";
 import FloatingCTA from "@/components/FloatingCTA";
 import ContactForm from "@/components/Contactform";
+import PromoSection from "@/components/ui/PromoSection";
 
 const benefits = [
     {
@@ -98,7 +99,14 @@ export default function SwagPacks() {
 
         <CompanyLogos />
 
-        <RecentProjects />
+        <RecentProjects
+            subtitle={"We offer a complete branded merchandise solution, custom tailored to your brand, service or product. We believe in telling your story. Our swag packs are specially designed & curated to your brand, budget & needs."}
+        />
+
+        <PromoSection
+            text={"Ready to Build a swag pack for your employees, Clients or partners"}
+            buttonText={"Talk to us Now!"}
+        />
 
         <ProductBenefit
             benefits={benefits}
@@ -107,6 +115,11 @@ export default function SwagPacks() {
         />
 
         <MostPopularGifting />
+
+        <PromoSection
+            text={"Want to better engage your team, clients & community with swag packs?"}
+            buttonText={"Enquire Now!"}
+        />
 
         <ProductsFeatures
             features={featuresData}
@@ -120,8 +133,8 @@ export default function SwagPacks() {
 
         <BrandsWeRepresent />
 
-        <ContactForm/>
+        <ContactForm />
 
-        <FloatingCTA type="connect"/>
+        <FloatingCTA type="connect" />
     </>;
 }

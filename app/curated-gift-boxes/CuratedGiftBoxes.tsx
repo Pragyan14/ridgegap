@@ -12,6 +12,7 @@ import TestimonialCarousel from "@/components/Testimonials";
 import JoinerSteps, { StepCard } from "@/components/JoinerSteps";
 import FloatingCTA from "@/components/FloatingCTA";
 import ContactForm from "@/components/Contactform";
+import PromoSection from "@/components/ui/PromoSection";
 
 
 const stepsData: StepCard[] = [
@@ -112,7 +113,14 @@ export default function CuratedGiftBoxes() {
             steps={stepsData}
         />
 
-        <RecentProjects />
+        <RecentProjects
+            subtitle={"We take immense pride in curating the most exquisite and thoughtful gift hampers and boxes that enhance the joys of gifting."}
+        />
+
+        <PromoSection
+            text={"We have the resources and experience to create the perfect curated gift hamper for all occasions."}
+            buttonText={"Connect Now!"}
+        />
 
         <ProductBenefit
             benefits={benefits}
@@ -128,13 +136,18 @@ export default function CuratedGiftBoxes() {
             subheading="Get started on the path to good employee retention & engagement by providing your new employees with a strong on boarding experience. We help companies just like yours enhance their employee on boarding experience with high quality welcome packs to make employees feel welcomed, valued & attended to before they even step foot in your building."
         />
 
+        <PromoSection
+            text={"Don’t settle for generic corporate gifts – choose our curated gift hampers to show your appreciation in style."}
+            buttonText={"Request a Catalogue!"}
+        />
+
         <TestimonialCarousel />
 
         <CorporateGiftingSolutions />
 
         <BrandsWeRepresent />
 
-        <ContactForm/>
+        <ContactForm />
 
         <FloatingCTA type="connect" />
     </>;

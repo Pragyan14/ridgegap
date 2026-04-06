@@ -11,6 +11,7 @@ import ProductHero from "@/components/ProductHero";
 import ProductsFeatures, { FeatureItem } from "@/components/ProductsFeatures";
 import RecentProjects from "@/components/Recentprojects";
 import TestimonialCarousel from "@/components/Testimonials";
+import PromoSection from "@/components/ui/PromoSection";
 
 const benefits = [
     {
@@ -87,7 +88,14 @@ export default function CorporateLaptopBags() {
 
         <CompanyLogos />
 
-        <RecentProjects />
+        <RecentProjects
+            subtitle={"Custom-made Backpacks & Corporate Laptop Bags would make an ideal promotional gift for staff, clients or customers."}
+        />
+
+        <PromoSection
+            text={"Ready to custom make a perfect corporate backpack or laptop bag for your team."}
+            buttonText={"Connect Now!"}
+        />
 
         <ProductBenefit
             benefits={benefits}
@@ -96,6 +104,11 @@ export default function CorporateLaptopBags() {
         />
 
         <MostPopularGifting />
+
+        <PromoSection
+            text={"Get inspired with our latest range of customisable backpacks and laptop bags."}
+            buttonText={"Download them Now!"}
+        />
 
         <ProductsFeatures
             features={featuresData}
@@ -109,7 +122,7 @@ export default function CorporateLaptopBags() {
 
         <BrandsWeRepresent />
 
-        <ContactForm/>
+        <ContactForm />
 
         <FloatingCTA type="connect" />
     </>;
